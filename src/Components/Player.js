@@ -3,7 +3,7 @@ import React from "react";
 function Player() {
   return (
     <div>
-      <p>mainp</p>
+      <p>player</p>
     </div>
   );
 }
