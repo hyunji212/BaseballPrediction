@@ -1,9 +1,11 @@
 import React from "react";
+import SideBar from "./sidebar";
 
 function MainTeam() {
   return (
     <div>
-      <p>mainp</p>
+      <p>mt</p>
+      <SideBar/>
     </div>
   );
 }

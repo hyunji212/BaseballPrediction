@@ -1,5 +1,4 @@
 import React from "react";
-import {BrowserRouter, Routes, Route, NavLink} from "react-router-dom"
 import "../css/Home.css";
 import Nav from "./Nav";
 
@@ -9,8 +8,7 @@ function Home() {
     <div className="intro" style={{overflowX: 'hidden'}}>
     <div className="header">
     <div className="logoArea"> LOGO </div>
-    <Nav></Nav>                 
-                     
+    <Nav></Nav>                         
     </div>
                     <div className="intro_text">
                         <h1>현재 <br /> 구단 순위</h1>
