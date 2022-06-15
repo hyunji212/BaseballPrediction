@@ -3,7 +3,7 @@ import React from "react";
 function Team() {
   return (
     <div>
-      <p>mainp</p>
+      <p>team 변경 완료</p>
     </div>
   );
 }
