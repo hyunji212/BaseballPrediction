@@ -7,7 +7,7 @@ const Team_ARR = ["KIA","롯데","삼성","두산","LG","SSG","한화","키움",
   return (
     <div>
         {Team_ARR.map((team,idx)=> (
-            <NavLink to={`/Team/${team}`}>{team}<br/></NavLink>
+            <NavLink to={`/Team/${idx}`}>{team}<br/></NavLink>
 
         ))}
     </div>

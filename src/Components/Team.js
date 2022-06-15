@@ -1,11 +1,18 @@
-import React from "react";
+import {React, useEffect} from "react";
+import { useLocation } from 'react-router-dom';
+import IndTeam from "./IndTeam";
 import SideBar from "./sidebar";
 
 function Team() {
+  const Team_Arr = ["KIA","롯데","삼성","두산","LG","SSG","한화","키움","NC","kt" ]
+  const location = useLocation();
+  const id = location.pathname.split("/")[2]
+    
   return (
+
     <div>
-      <p>team</p>
       <SideBar/>
+      <IndTeam team={Team_Arr[id]}></IndTeam>
     </div>
   );
 }
