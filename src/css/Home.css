@@ -1,6 +1,10 @@
+body {
+  margin: 0 0; 
+}
+   
 .intro {
     background-color: #EBEFF7;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -64,7 +68,7 @@
     height: 100vh;
   }
   
-.title1 {
+.intro2_text {
     margin: auto;
     text-align: center;
     line-height: 5px;
@@ -75,7 +79,7 @@
     padding-top: 70px;
   }
   
-.service1, .service2 {
+.service {
     display: flex;
     width: 100%;
     /*background-color: green;*/
@@ -99,3 +103,5 @@
 .content1, .content2, .content3, .content4,.content5,.content6 {
     font-size: small;
   }
+
+  /*<div className="icon6"><img src="" width={40} height={40} alt=""/></div>*/
