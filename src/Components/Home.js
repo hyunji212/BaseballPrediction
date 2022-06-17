@@ -4,6 +4,7 @@ import TotalNav from "./TotalNav";
 import NowRanking from "./NowRanking"
 import {NavLink} from "react-router-dom";
 import { Button} from 'react-bootstrap';
+import ServiceList from "./ServiceList"
 
 
 function Home() {
@@ -19,82 +20,20 @@ function Home() {
     </div>
     </div>
 
-                <div className="intro2" style={{overflowX: 'hidden'}}>
-                        <div className="title1">
-                            KBO가 제공하는 서비스
-                        </div>
-                        <ul className="service1">
-                            <li>
-                            <div className="icon1">
-                                <img src="" width={40} height={40} alt=""/>
-                            </div>
-                            <div className="subtitle1">
-                                팀별 순위 예측
-                            </div>
-                            <div className="content1">
-                                팀별 순위 예측에 관한 설명
-                            </div>
-                            </li>
-                            <li>
-                            <div className="icon2">
-                                <img src="" width={40} height={40} alt=""/>
-                            </div>
-                            <div className="subtitle2">
-                                선수별 랭킹
-                            </div>
-                            <div className="content2">
-                                선수별 랭킹에 관한 설명
-                            </div>
-                            </li>
-                            <li>
-                            <div className="icon3">
-                                <img src="" width={40} height={40} alt=""/>
-                            </div>
-                            <div className="subtitle3">
-                                선수별 순위 예측
-                            </div>
-                            <div className="content3">
-                                선수별 순위 예측에 관한 설명
-                            </div>
-                            </li>
-                        </ul>
-                        <ul className="service2">
-                            <li>
-                            <div className="icon4">
-                                <img src="" width={40} height={40} alt=""/>
-                            </div>
-                            <div className="subtitle4">
-                                검색
-                            </div>
-                            <div className="content4">
-                                검색에 관한 설명
-                            </div>
-                            </li>
-                            <li>
-                            <div className="icon5">
-                                <img src="" width={40} height={40} alt=""/>
-                            </div>
-                            <div className="subtitle5">
-                                우리팀 응원하기
-                            </div>
-                            <div className="content5">
-                                우리팀 응원하기에 관한 설명
-                            </div>
-                            </li>
-                            <li>
-                            <div className="icon6">
-                                <img src="" width={40} height={40} alt=""/>
-                            </div>
-                            <div className="subtitle6">
-                                최근 경기 기록
-                            </div>
-                            <div className="content6">
-                                최근 경기 기록에 관한 설명
-                            </div>
-                            </li>
-                        </ul>
-                </div>
-                </div>
+    <div className="intro2" style={{overflowX: 'hidden'}}>
+      <div className="title1">
+        KBO가 제공하는 서비스
+      </div>
+      <div className="service1">
+         <ServiceList id="1" title="1제목" content="1내용"/>
+         <ServiceList id="2" title="2제목" content="2내용"/> 
+         <ServiceList id="3" title="3제목" content="3내용"/> 
+         <ServiceList id="4" title="4제목" content="4내용"/> 
+         <ServiceList id="5" title="5제목" content="5내용"/> 
+         <ServiceList id="6" title="6제목" content="6내용"/>                    
+      </div>
+    </div>
+    </div>
   );
 }
 
