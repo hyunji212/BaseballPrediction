@@ -1,0 +1,27 @@
+.sidebar {
+    display: grid;
+    background-color: #EBEFF7;
+    height: 100vh;
+    width: 250px;
+}
+
+.sidebar-item-active {
+    color: white;
+    font-size: medium;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 650; 
+    text-align: center;
+    background-color: #3C64B1;
+}
+
+.sidebar-item {
+    color: black;
+    font-size: medium;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 650; 
+    text-align: center;
+    background-color: #EBEFF7
+}
+
