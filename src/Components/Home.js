@@ -4,6 +4,7 @@ import TotalNav from "./TotalNav";
 import NowRanking from "./NowRanking"
 import {NavLink} from "react-router-dom";
 import { Button} from 'react-bootstrap';
+import ServiceList from "./ServiceList"
 
 
 function Home() {
@@ -20,10 +21,25 @@ function Home() {
     </div>
 
     <div className="intro2" style={{overflowX: 'hidden'}}>
+<<<<<<< HEAD
         <div className="title1"> KBO가 제공하는 서비스 </div>
                        
                        
         </div>
+=======
+      <div className="title1">
+        KBO가 제공하는 서비스
+      </div>
+      <div className="service1">
+         <ServiceList id="1" title="1제목" content="1내용"/>
+         <ServiceList id="2" title="2제목" content="2내용"/> 
+         <ServiceList id="3" title="3제목" content="3내용"/> 
+         <ServiceList id="4" title="4제목" content="4내용"/> 
+         <ServiceList id="5" title="5제목" content="5내용"/> 
+         <ServiceList id="6" title="6제목" content="6내용"/>                    
+      </div>
+    </div>
+>>>>>>> 86ec33abe5a4951d4cdc1f51eb499d6bbf8dd15c
     </div>
   );
 }
