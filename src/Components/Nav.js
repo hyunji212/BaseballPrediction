@@ -13,6 +13,8 @@ function Nav() {
         {name: "Home", path: "/"},
         {name: "Team", path: "/MainTeam"},
         {name: "Player", path: "/MainPlayer"},
+        {name: "Live", path: "/Live"}
+
     ]
     return (
         <div className="nav">

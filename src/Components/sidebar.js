@@ -7,6 +7,7 @@ function SideBar() {
 
   return (
     <div className="sidebar">
+      
         {Team_Arr.map((team,idx)=> (
               <NavLink to={`/Team/${idx}`} key={idx} style={{ textDecoration: 'none'}}>
                 {team}
