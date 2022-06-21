@@ -4,8 +4,9 @@ import TotalNav from "./TotalNav";
 import NowRanking from "./NowRanking"
 import {NavLink} from "react-router-dom";
 import { Button} from 'react-bootstrap';
+import Graph from "../img/MainPageGraph.jpg";
 import ServiceList from "./ServiceList"
-
+import Live from "./Live"
 
 function Home() {
   const Team_Arr = ["KIA","롯데","삼성","두산","LG","SSG","한화","키움","NC","kt" ];
@@ -15,32 +16,30 @@ function Home() {
      <div className="intro" style={{overflowX: 'hidden'}}>
       <TotalNav/>                   
        <div className="intro_text">
-       <h1>현재 <br/> 구단 순위</h1>
+       <h1>KBO 정규리그 <br/> 현재 순위</h1>
        <h4>2022 KBO 정규리그 10개 팀의 승률입니다. <br /> 각 팀을 누르면 팀별 페이지로 이동합니다.</h4>
-     <NavLink to="/MainTeam"> <Button className="trial"> Start free trial </Button></NavLink>
-     <br></br>
+
+       <h4>팀 페이지에서 원하는 TEAM의 기간별 언급량 및 <br /> 예측 순위를 확인할 수 있습니다.</h4>
+
+       <h4>MY TEAM으로 이동해 보세요</h4>
      {Team_Arr.map((team,idx)=> (
               <NavLink to={`/Team/${idx}`} key={idx} style={{ textDecoration: 'none'}}>
                <Button className="teamselect"> {team}</Button> 
               </NavLink>
         ))}
       <NowRanking/>
+    </div>    
     </div>
-    </div>
+    <Live/>
+    <div className="intro_text">
+       <h1>KBO 리그 순위 예측</h1>
+       <h4>팀 별 정규시즌 순위 예측과 <br/>선수 별 OPS,ERA,FPCT를 예측합니다</h4>
+      <NavLink to="/MainTeam">Team</NavLink>
+      <NavLink to="/MainPlayer">Player</NavLink>
+      <img className="MainPageGraph" src={Graph}/>
 
-    <div className="intro2" style={{overflowX: 'hidden'}}>
-      <div className="title1">
-        KBO가 제공하는 서비스
-      </div>
-      <div className="service1">
-         <ServiceList id="1" title="1제목" content="1내용"/>
-         <ServiceList id="2" title="2제목" content="2내용"/> 
-         <ServiceList id="3" title="3제목" content="3내용"/> 
-         <ServiceList id="4" title="4제목" content="4내용"/> 
-         <ServiceList id="5" title="5제목" content="5내용"/> 
-         <ServiceList id="6" title="6제목" content="6내용"/>                    
-      </div>
-    </div>
+
+       </div>
     </div>
   );
 }

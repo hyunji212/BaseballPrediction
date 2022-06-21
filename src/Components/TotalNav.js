@@ -5,7 +5,6 @@ function TotalNav() {
 
 return(
     <div className="header">
-    <div className="logoArea"> LOGO </div>
     <Nav/>                      
     </div>
 )

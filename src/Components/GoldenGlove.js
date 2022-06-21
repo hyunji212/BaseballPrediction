@@ -1,12 +1,14 @@
 import React from "react";
 import TotalNav from "./TotalNav";
 
-function Live() {
+function GoldenGlove() {
   return (
     <div>
-      <h1>KBO 정규리그 경기 결과</h1>
+      <TotalNav/>
+      <p>골든글로브</p>
+
     </div>
   );
 }
 
-export default Live;
+export default GoldenGlove;

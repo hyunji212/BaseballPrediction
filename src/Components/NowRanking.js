@@ -35,7 +35,7 @@ function NowRanking() {
   return (
     <div>
         <table>
-            <th>순위</th><th>팀</th><th>경기</th><th>승</th><th>패</th><th>무</th><th>승률</th><th>게임 차</th><th>연속</th>
+            <th>순위</th><th>팀</th><th>경기</th><th>승 - 패 - 무</th><th>승률</th><th>게임 차</th><th>연속</th>
             {ranking.map((rank,idx)=>(
                <tr>
                    <td>{idx+1}</td>
@@ -43,8 +43,6 @@ function NowRanking() {
                    <td>{rank.name}</td>
                    <td>{rank.name}</td>
                    <td>{rank.username}</td>
-                   <td>{rank.name}</td>
-                   <td>{rank.name}</td>
                    <td>{rank.name}</td>
                    <td>{rank.name}</td>
                </tr> 

@@ -3,7 +3,7 @@ import Home from "./Components/Home";
 import MainPlayer from "./Components/MainPlayer";
 import Player from "./Components/Player";
 import MainTeam from "./Components/MainTeam";
-import Live from "./Components/Live";
+import GoldenGlove from "./Components/GoldenGlove";
 import Team from "./Components/Team";
 import { Route, Routes } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ function App() {
       <Route path="/Player/*" element={<Player/>}/>
       <Route path="/Team/*" element={<Team/>}/>
       <Route path="/MainTeam/*" element={<MainTeam/>}/>
-      <Route path="/Live" element={<Live/>}/>
+      <Route path="/GoldenGlove" element={<GoldenGlove/>}/>
       <Route path="*" element={"Not Found"}/>
       </Routes>
     </div>
