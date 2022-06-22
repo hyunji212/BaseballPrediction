@@ -37,6 +37,7 @@
     margin: auto;
     width: 100vw;
     height: 10vh;
+    background-color: #EBEFF7;
     border-bottom: solid 2.3px #3C64B1;
     /*background-color: red;*/
   }
@@ -45,16 +46,21 @@
     height: 8vh;
     margin-right: 1vw;
     margin-top: 1vh;
+    float: left;
   }
 
 .navlogo{
-  position: relative;
-
+  float: left;
+  width: 180px;
+  margin-left: 120px;
 }
 
 .navcomment{
-
-  font-size: 3.5vh;
+  font-size: 4.0vh;
   font-weight: bolder;
   color: black;
+  padding: 10px 0;
+  height: 30px;
+  display: inline-block;
+  margin-top: 1vh;
 }

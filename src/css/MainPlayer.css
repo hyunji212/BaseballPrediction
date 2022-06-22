@@ -1,0 +1,25 @@
+.Player_Main_Title {
+    background-color: red;
+    text-align: center;
+    margin-top: 120px;
+    height: 200px;
+    padding: auto;
+}
+
+.Big_Title {
+    font-size: 40px;
+}
+
+.Small_Content {
+    font-size: 20px;
+    color: gray;
+}
+
+.Service_List {
+    background-color: aqua;
+}
+
+.Service_Img {
+    width: 5vh;
+
+}

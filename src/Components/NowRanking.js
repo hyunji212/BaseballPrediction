@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from '../request';
+import "../css/HomeRanking.css";
 
 function NowRanking() {
   const [ranking, setRanking] = useState(null);
@@ -31,11 +32,11 @@ function NowRanking() {
   if (!ranking) return null;
 
   return (
-    <div>
-        { <table>
+    <div className="Home_Ranking">
+        { <table className="Home_Table">
             <th>순위</th><th>팀</th><th>경기</th><th>승 - 패 - 무</th><th>승률</th><th>게임 차</th><th>연속</th>
             {ranking.map((rank,idx)=>(
-               <tr>
+               <tr className="Table_Content">
                    <td>{rank.ranking}</td>
                    <td>{rank.team}</td>
                    <td>{rank.gameNumber}</td>

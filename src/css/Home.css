@@ -21,9 +21,8 @@ body {
   }
 
 .intro_text {
-    width: 300px;
+    width: 30vw;
     height: 410px;
-    /*background-color: red;*/
     margin-top: 150px;
     margin-left: 8vw;
   }

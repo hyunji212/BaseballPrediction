@@ -18,16 +18,15 @@ function Nav() {
     ]
     return (
         <div className = "navheader">
+        <div className="navlogo">
+                <img className="nav_logo" src={logo}/>
+                <div className="navcomment">YBO</div>
+        </div>
         <div className="nav">
-            <div className="navlogo">
-            <img className="nav_logo" src={logo}/><span className="navcomment">YBO</span>
-            </div>
-
             {Menu.map((menu, index) => {
                 return (
                     <NavLink to={menu.path} key={index} className="navbutton">
                     <NavItem    menu={menu} isActive={pathName===menu.path ? true : false}/>
-
                      </NavLink>
                 )
             })
