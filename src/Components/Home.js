@@ -16,7 +16,7 @@ function Home() {
     <div style={{overflowX: 'hidden'}}>
      <div className="intro" style={{overflowX: 'hidden'}}>
       <Nav/>                   
-       <div className="intro_text">
+       <div className="intro_text_top">
        <h1>KBO 정규리그 <br/> 현재 순위</h1>
        <h4>2022 KBO 정규리그 10개 팀의 승률입니다. <br /> 각 팀을 누르면 팀별 페이지로 이동합니다.</h4>
 
@@ -24,7 +24,7 @@ function Home() {
 
        <h4>MY TEAM으로 이동해 보세요</h4>
        <div className="teamcontainer">
-     {Team_Arr.map((team,idx)=> (
+           {Team_Arr.map((team,idx)=> (
               <NavLink to={`/Team/${idx}`} key={idx} style={{ textDecoration: 'none'}}>
                <Button className="teamselect"> {team}</Button> 
               </NavLink>
@@ -33,15 +33,21 @@ function Home() {
     </div>    
     </div>
     <Live/>
-    <div className="intro_text">
-       <h1>KBO 리그, 선수 순위 예측</h1>
-       <h4>팀 별 정규시즌 순위 예측과 <br/>선수 별 OPS,ERA,FPCT를 예측합니다</h4>
-      <NavLink to="/MainTeam">Team</NavLink>
-      <NavLink to="/MainPlayer">Player</NavLink>
-      <img className="MainPageGraph" src={Graph}/>
-
-
-       </div>
+    <div className="intro_Container">
+      <div className="intro_text">
+          <h1>KBO 리그 순위 예측</h1>
+          <h4>팀별 정규시즌 순위 예측과 <br/>선수별 OPS, ERA를 예측합니다</h4>
+          <NavLink to="/MainTeam">
+              <Button className="to_team">Team</Button>
+          </NavLink>
+          <NavLink to="/MainPlayer">
+              <Button className="to_player">Player</Button>
+          </NavLink>
+      </div>
+      <div className="intro_img">
+          <img className="MainPageGraph" src={Graph}/>
+      </div>
+    </div>
     </div>
   );
 }

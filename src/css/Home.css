@@ -20,22 +20,34 @@ body {
     padding-left: 70px;
   }
 
-.intro_text {
-    width: 30vw;
-    height: 410px;
-    margin-top: 150px;
-    margin-left: 8vw;
-  }
+.intro_text_top {
+  width: 40vw;
+  height: 70vh;
+  margin-top: 12vh;
+  margin-left: 8vw;
+  float: left;
+}
+
+.intro_text_top > h1 {
+  color: black;
+  font-size: 45px;
+}
+
+.intro_text_top > h4 {
+  margin-top: 15px;
+  color: gray;
+  font-size: 2vh;
+}
   
 .intro_text > h1 {
     color: black;
-    font-size: 45px;
+    font-size: 5vh;
   }
   
 .intro_text > h4 {
     margin-top: 15px;
     color: gray;
-    font-size: 15px;
+    font-size: 2.5vh;
   }
   
 .trial {
@@ -94,8 +106,8 @@ body {
   /*<div className="icon6"><img src="" width={40} height={40} alt=""/></div>*/
 
   .teamselect{
-    height: 3vh;
-    width: 4vw;
+    height: 4.5vh;
+    width: 6vw;
     margin-bottom: 0.2vh;
     margin-right :0.2vw ;
     color: white;
@@ -110,6 +122,54 @@ body {
   }
 
 .teamcontainer{
-  width: 25vw;
+  width: 32vw;
 
+}
+
+.MainPageGraph {
+  float: right;
+  width: 40vw;
+  height: 60vh;
+  float: left;
+  margin-top: 20vh;
+  margin-left: 9vw;
+}
+
+.intro_text {
+  width: 30vw;
+  height: 70vh;
+  margin-top: 30vh;
+  margin-left: 8vw;
+  float: left;
+}
+
+.intro_img {
+  background-color: aqua;
+}
+
+.to_team {
+    height: 7vh;
+    width: 10vw;
+    margin-bottom: 0.2vh;
+    margin-right :0.2vw ;
+    color: white;
+    background-color: #3C64B1;
+    font-size: 2.3vh;
+    border: none;
+    margin-top: 6vh;
+    border-radius: 5px;
+}
+
+.to_player {
+    height: 7vh;
+    width: 10vw;
+    margin-bottom: 0.2vh;
+    margin-right :0.2vw ;
+    color: white;
+    background-color: #3C64B1;
+    font-size: 2.3vh;
+    border: none;
+    margin-left: 2vw;
+    margin-top: 6vh;
+    border-radius: 5px;
 }
