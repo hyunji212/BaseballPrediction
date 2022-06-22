@@ -1,0 +1,62 @@
+.Live_Page {
+    background-color: white;
+    height: 100vh;
+}
+
+.Live_Container {
+    height: 80vh;
+    text-align: center;
+    width: 40vw;
+    margin: auto;
+    margin-top: 8vh;
+}
+
+.Date {
+    font-size: 2.5vh;
+    color: #3C64B1;
+    padding-top: 2vh;
+    font-weight: bold;
+}
+
+.Live_table {
+    background-color: #EBEFF7;
+    height: 70vh;
+}
+
+.Live_Each {
+    /*background-color: red;*/
+    margin-top: 10px;
+    height: 10vh;
+    margin-bottom: 20px;
+}
+
+.Left_Team {
+    /*background-color: green;*/
+    float: left;
+    margin-left: 1vw;
+}
+
+.Right_Team {
+    /*background-color: orange;*/
+    float: left;
+}
+
+.Score_Total {
+    /*background-color: pink;*/
+    float: left;
+    margin-left: 12vw;
+    margin-right: 12vw;
+    margin-top: 1vh;
+}
+
+.Score {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.Live_Content {
+    float: left;
+    background-color: white;
+    height: 10vh;
+    width: 40vw;
+}

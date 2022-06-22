@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from '../request';
+import "../css/Live.css";
 
 function Live() {
 
@@ -9,7 +10,6 @@ function Live() {
   const [code, setCode] = useState(null);
 
   let now = new Date();
-  let year = now.getFullYear();
   let today_month = now.getMonth() + 1;
   let today_date =  now.getDate();
   const week = ["일","월","화","수","목","금","토"];
@@ -21,7 +21,7 @@ function Live() {
               setError(null);
               setGame(null);
               setLoading(false)
-              const response = await axios.get("/realtime-game/monday");
+              const response = await axios.get("/realtime-game/");
               console.log(response.data)
               console.log(response.data.statusCode)
               setCode(response.data.statusCode)
@@ -49,14 +49,27 @@ function Live() {
         return(
          <div>
            {game.map((game,idx)=>(
-            <div>
-              {game.leftTeam}
-              {game.leftPitcher}
-              {game.leftScore}
-             {game.gameState}
-             {game.rightTeam}
-             {game.rightPitcher}
-              {game.rightScore}
+            <div className="Live_Each">
+              <div className="Live_Content">
+                <div className="Left_Team">
+                  {game.leftTeam}
+                  -
+                  {game.leftPitcher}
+                </div>
+                <div className="Score_Total">
+                  <div className="State">
+                    {game.gameState}
+                  </div>
+                  <div className="Score">
+                    {game.leftScore} : {game.rightScore}
+                  </div>
+                </div>
+                <div className="Right_Team">
+                  {game.rightTeam}
+                  -
+                  {game.rightPitcher}
+                </div>
+              </div>
             </div>
 
            ))}
@@ -68,10 +81,14 @@ function Live() {
   
 
   return (
-    <div>
-      <h1>KBO 정규리그 경기 결과</h1>
-      <p> {year} - {today_month} - {today_date} ({dayOfWeek})</p>
-      {content()}
+    <div className="Live_Page">
+      <div className="Live_Container">
+        <h1>KBO 정규리그 경기 결과</h1>
+        <div className="Live_table">
+        <p className="Date"> {today_month}.{today_date} ({dayOfWeek})</p>
+        {content()}
+        </div>
+      </div>
     </div>
   );
 }
