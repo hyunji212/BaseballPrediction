@@ -21,7 +21,7 @@ function Live() {
               setError(null);
               setGame(null);
               setLoading(false)
-              const response = await axios.get("/realtime-game/");
+              const response = await axios.get("/realtime-game");
               console.log(response.data)
               console.log(response.data.statusCode)
               setCode(response.data.statusCode)
