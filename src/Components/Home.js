@@ -34,7 +34,7 @@ function Home() {
     </div>
     <Live/>
     <div className="intro_text">
-       <h1>KBO 리그 순위 예측</h1>
+       <h1>KBO 리그, 선수 순위 예측</h1>
        <h4>팀 별 정규시즌 순위 예측과 <br/>선수 별 OPS,ERA,FPCT를 예측합니다</h4>
       <NavLink to="/MainTeam">Team</NavLink>
       <NavLink to="/MainPlayer">Player</NavLink>
