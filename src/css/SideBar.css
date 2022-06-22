@@ -1,8 +1,8 @@
 .sidebar {
     display: grid;
     background-color: #EBEFF7;
-    height: 100vh;
-    width: 250px;
+    height: 90vh;
+    width: 200px;
 }
 
 .sidebar-item-active {
@@ -25,3 +25,18 @@
     background-color: #EBEFF7
 }
 
+.sideBarTeam{
+    margin-left: 22px;
+    font-size: 2vh;
+    color: black;
+    font: bold;
+}
+
+.sideBarTeam:hover{
+    color: #22753b;
+}
+
+
+.sidebarlogo{
+    margin-right: 10px;
+}

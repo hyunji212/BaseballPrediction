@@ -5,7 +5,8 @@ function GoldenGlove() {
   return (
     <div>
       <Nav/>
-      <p>골든글로브</p>
+      <p>Golden Glove</p>
+      <div> </div>
 
     </div>
   );

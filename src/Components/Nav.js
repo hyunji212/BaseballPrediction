@@ -19,7 +19,7 @@ function Nav() {
     return (
         <div className = "navheader">
         <div className="navlogo">
-                <img className="nav_logo" src={logo}/>
+                <img className="nav_logo" src={logo} alt="logo"/>
                 <div className="navcomment">YBO</div>
         </div>
         <div className="nav">

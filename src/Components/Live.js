@@ -22,8 +22,7 @@ function Live() {
               setGame(null);
               setLoading(false)
               const response = await axios.get("/realtime-game");
-              console.log(response.data)
-              console.log(response.data.statusCode)
+        
               setCode(response.data.statusCode)
               setGame(response.data.data);
           } catch(e){
@@ -41,6 +40,30 @@ function Live() {
   if (error) return <div>에러가 발생했습니다</div>;
   if (!game) return null;
 
+
+  function returnLogo(team){
+    if(['LG', 'SSG', 'KT'].includes(team)){
+      const imgUrl = require("../img/logo/" + team +".png");
+      return (<img src={imgUrl} alt={team} style={{height:"2vh"}}/>);
+    } else{
+      const imgUrl = require("../img/logo/" + team +".jpg");
+      return (<img src={imgUrl} alt={team} style={{height:"2vh"}}/>);
+    }
+  }
+
+  function ShowScore(score){
+    if(!score){
+      return(
+        0
+      ); } else{
+        return (
+          {score}
+        )
+      }
+    
+  }
+  
+
   function content(){
     if(code === 204){
       return(
@@ -53,6 +76,7 @@ function Live() {
               <div className="Live_Content">
                 <div className="Left_Team">
                   {game.leftTeam}
+                  {returnLogo(game.leftTeam)}
                   -
                   {game.leftPitcher}
                 </div>
@@ -61,11 +85,13 @@ function Live() {
                     {game.gameState}
                   </div>
                   <div className="Score">
-                    {game.leftScore} : {game.rightScore}
+                    {ShowScore(Number(game.leftScore))} : {ShowScore(Number(game.rightScore))}
                   </div>
                 </div>
                 <div className="Right_Team">
                   {game.rightTeam}
+                  {returnLogo(game.rightTeam)}
+
                   -
                   {game.rightPitcher}
                 </div>
@@ -77,8 +103,6 @@ function Live() {
         );
       }
     }
-
-  
 
   return (
     <div className="Live_Page">

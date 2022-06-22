@@ -5,8 +5,8 @@ import NowRanking from "./NowRanking"
 import {NavLink} from "react-router-dom";
 import { Button} from 'react-bootstrap';
 import Graph from "../img/MainPageGraph.jpg";
-import ServiceList from "./ServiceList"
 import Live from "./Live"
+import HomeRanking from "./HomeRanking";
 
 
 function Home() {
@@ -45,9 +45,11 @@ function Home() {
           </NavLink>
       </div>
       <div className="intro_img">
-          <img className="MainPageGraph" src={Graph}/>
+          <img className="MainPageGraph" src={Graph} alt="graph"/>
       </div>
     </div>
+    <HomeRanking id="0"/>
+    <HomeRanking id="1"/>
     </div>
   );
 }

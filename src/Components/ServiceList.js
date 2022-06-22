@@ -17,14 +17,14 @@ function ServiceList(props) {
     if(id !== 2){
       return(
         <NavLink to={`/player/${id}`} key={id} style={{ textDecoration: 'none'}}>
-        <img className='Service_Img' src={img[id]}/>
+        <img className='Service_Img' src={img[id]} alt={title[id]}/>
         <div className='Service_Name'>{title[id]}</div>
         <div className='Service_Info'>{desc[id]}</div>
         </NavLink>
       );}else{
         return(
           <NavLink to={`/GoldenGlove`} key={id} style={{ textDecoration: 'none'}}>
-          <img className='Service_Img' src={img[id]}/>
+          <img className='Service_Img' src={img[id]} alt={title[id]}/>
           <div className='Service_Name'>{title[id]}</div>
           <div className='Service_Info'>{desc[id]}</div>
           </NavLink>
