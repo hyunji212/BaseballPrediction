@@ -1,20 +1,60 @@
 .nav {
     display: flex;
-    width: calc(1280px - 300px);
+    width: 100vw;
     justify-content: flex-end;
     line-height: 2.8;
+    background-color: #EBEFF7;
   }
 
+  
 .nav-item-active {
-    font-size: 15px;
-    color: #3C64B1;
-    font-weight: 400;
-    margin-right: 80px;
+  font-size: 15px;
+  color: #3C64B1;
+  font-size: 2vh;
+  margin-right: 3vw;
+  margin-top: 2vh;
+  font-weight: bold;
+
 }
 
 .nav-item {
-    font-size: 15px;
-    color: black;
-    font-weight: 400;
-    margin-right: 80px;
+  font-size: 15px;
+  color: black;
+  font-size: 2vh;
+  margin-right: 3vw;
+  margin-top: 2vh;
+  font-weight: bold;
+
+}
+
+.navbutton{
+  text-decoration: None;
+}
+
+
+.navheader {
+    display: flex;
+    margin: auto;
+    width: 100vw;
+    height: 10vh;
+    border-bottom: solid 2.3px #3C64B1;
+    /*background-color: red;*/
+  }
+
+.nav_logo{
+    height: 8vh;
+    margin-right: 1vw;
+    margin-top: 1vh;
+  }
+
+.navlogo{
+  position: relative;
+
+}
+
+.navcomment{
+
+  font-size: 3.5vh;
+  font-weight: bolder;
+  color: black;
 }

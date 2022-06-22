@@ -1,10 +1,10 @@
 import React from "react";
-import TotalNav from "./TotalNav";
+import Nav from "./Nav";
 
 function Player() {
   return (
     <div>
-      <TotalNav/>
+      <Nav/>
       <p>player</p>
     </div>
   );

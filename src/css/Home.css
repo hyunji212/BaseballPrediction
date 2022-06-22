@@ -4,20 +4,9 @@ body {
    
 .intro {
     background-color: #EBEFF7;
-    width: 100vw;
     height: 100vh;
 }
 
-.header {
-    display: flex;
-    margin: auto;
-    width: 100vw;
-    height: 70px;
-    border-bottom: solid 2px #3C64B1;
-    /*background-color: red;*/
-    padding-right: 70px
-  }
-  
 .logoArea{
     width: 300px;
     height: 40px;
@@ -35,9 +24,8 @@ body {
     width: 300px;
     height: 410px;
     /*background-color: red;*/
-    padding-left: 70px;
     margin-top: 150px;
-    margin-left: 120px;
+    margin-left: 8vw;
   }
   
 .intro_text > h1 {
@@ -105,3 +93,24 @@ body {
   }
 
   /*<div className="icon6"><img src="" width={40} height={40} alt=""/></div>*/
+
+  .teamselect{
+    height: 3vh;
+    width: 4vw;
+    margin-bottom: 0.2vh;
+    margin-right :0.2vw ;
+    color: white;
+    background-color: #3C64B1;
+    font-size: 1.5vh;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .teamselect:hover{
+    background-color: #0a1d41;
+  }
+
+.teamcontainer{
+  width: 25vw;
+
+}

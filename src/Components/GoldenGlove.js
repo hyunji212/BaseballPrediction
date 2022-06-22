@@ -1,10 +1,10 @@
 import React from "react";
-import TotalNav from "./TotalNav";
+import Nav from "./Nav";
 
 function GoldenGlove() {
   return (
     <div>
-      <TotalNav/>
+      <Nav/>
       <p>골든글로브</p>
 
     </div>

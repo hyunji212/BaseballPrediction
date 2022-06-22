@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import axios from 'axios';
+import axios from '../request';
 
 function NowRanking() {
   const [ranking, setRanking] = useState(null);
@@ -12,11 +12,9 @@ function NowRanking() {
               setError(null);
               setRanking(null);
               setLoading(false)
+              const response = await axios.get("/realtime-ranking");
 
-              const response = await axios.get(
-                'https://jsonplaceholder.typicode.com/users'
-              );
-            setRanking(response.data);
+            setRanking(response.data.data);
           } catch(e){
               setError(e);
           }
@@ -34,20 +32,20 @@ function NowRanking() {
 
   return (
     <div>
-        <table>
+        { <table>
             <th>순위</th><th>팀</th><th>경기</th><th>승 - 패 - 무</th><th>승률</th><th>게임 차</th><th>연속</th>
             {ranking.map((rank,idx)=>(
                <tr>
-                   <td>{idx+1}</td>
-                   <td>{rank.username}</td>
-                   <td>{rank.name}</td>
-                   <td>{rank.name}</td>
-                   <td>{rank.username}</td>
-                   <td>{rank.name}</td>
-                   <td>{rank.name}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.team}</td>
+                   <td>{rank.gameNumber}</td>
+                   <td>{rank.winNumber} <span>-</span> {rank.loseNumber} <span>-</span> {rank.drawNumber}  </td>
+                   <td>{rank.winRate}</td>
+                   <td>{rank.gameDiff}</td>
+                   <td>{rank.continuity}</td>
                </tr> 
             ))}
-        </table>
+        </table> }
     </div>
   );
 }

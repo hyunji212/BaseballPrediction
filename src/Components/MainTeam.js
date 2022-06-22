@@ -2,12 +2,12 @@ import React from "react";
 import SideBar from "./sidebar";
 import TeamPrediction from "./TeamPrediction";
 import AutumnPredicion from "./AutumnPrediction";
-import TotalNav from "./TotalNav"
+import Nav from "./Nav"
 
 function MainTeam() {
   return (
     <div>
-      <TotalNav/>
+      <Nav/>
       <SideBar/>
       <TeamPrediction/>
       <AutumnPredicion/>
