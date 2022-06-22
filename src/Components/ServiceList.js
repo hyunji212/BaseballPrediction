@@ -10,15 +10,19 @@ import ops from "../img/OPS.png";
 function ServiceList(props) {
   const img=[era, glove, ops]
   const id = Number(props.id)
+  const Player_Arr = ["OPS","Golden Glove","ERA"]
+  const title = ["OPS","Golden Glove","ERA"]
+  const content = ["출루율 + 장타율", "선수들의 예상 순위","평균자책점"]
 
   return (
       <div className='Service_List'>
-        <div>
+        <span>
+          <NavLink to={`/player/${id}`} key={id} style={{ textDecoration: 'none'}}>
           <img className='Service_Img' src={img[id]}/>
-          <NavLink to={`/Player/${props.id}`} key={props.id}> 
-          <div>{props.title}<br/>{props.content}</div>
+          <div className='Service_Name'>{title[id]}</div>
+          <div className='Service_Info'>{content[id]}</div>
           </NavLink>
-        </div>
+        </span>
       </div>
   )
 }
