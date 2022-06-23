@@ -18,7 +18,7 @@
 .Service_List {
     margin-top: 20px;
     text-align: center;
-    width: 350px;
+    width: 20vw;
     float: left;
     margin-left: 85px; 
     background-color: red;
@@ -42,5 +42,5 @@
 .service_container {
     background-color: blue;
     height: 20vh;
-    margin-left: 50px;
+    padding-left: 10vw;
 }
