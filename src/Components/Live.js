@@ -14,7 +14,7 @@ function Live() {
   let today_date =  now.getDate();
   const week = ["일","월","화","수","목","금","토"];
   let dayOfWeek = week[now.getDay()];
-
+  console.log(window.innerWidth)
   useEffect(()=>{
       const fetchTeam = async () => {
           try {
