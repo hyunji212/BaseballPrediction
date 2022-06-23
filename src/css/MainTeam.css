@@ -1,0 +1,14 @@
+.mainteam {
+    display: inline-block;
+    background: linear-gradient(180deg, #1E50CB 0%, rgba(32, 65, 149, 0) 100%);
+    width: 84vw;
+    height: 90vh;
+}
+
+.mainteam_title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 8vh;
+    text-align: center;
+    color: white;
+}

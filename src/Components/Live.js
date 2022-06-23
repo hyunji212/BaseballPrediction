@@ -21,7 +21,7 @@ function Live() {
               setError(null);
               setGame(null);
               setLoading(false)
-              const response = await axios.get("/realtime-game");
+              const response = await axios.get("/realtime-game/");
         
               setCode(response.data.statusCode)
               setGame(response.data.data);
@@ -44,10 +44,10 @@ function Live() {
   function returnLogo(team){
     if(['LG', 'SSG', 'KT'].includes(team)){
       const imgUrl = require("../img/logo/" + team +".png");
-      return (<img src={imgUrl} alt={team} style={{height:"2vh"}}/>);
+      return (<img src={imgUrl} alt={team} style={{height:"6vh", width:"4vw"}}/>);
     } else{
       const imgUrl = require("../img/logo/" + team +".jpg");
-      return (<img src={imgUrl} alt={team} style={{height:"2vh"}}/>);
+      return (<img src={imgUrl} alt={team} style={{height:"6vh", width:"4vw"}}/>);
     }
   }
 
@@ -67,7 +67,7 @@ function Live() {
   function content(){
     if(code === 204){
       return(
-        <div>오늘은 경기가 없습니다</div>
+        <div className="monday">오늘은 경기가 없습니다</div>
       );}else{
         return(
          <div>
@@ -75,10 +75,10 @@ function Live() {
             <div className="Live_Each">
               <div className="Live_Content">
                 <div className="Left_Team">
-                  {game.leftTeam}
-                  {returnLogo(game.leftTeam)}
-                  -
-                  {game.leftPitcher}
+                  {game.leftTeam} - {game.leftPitcher}
+                <div className="left_logo">
+                   {returnLogo(game.leftTeam)}
+                </div>
                 </div>
                 <div className="Score_Total">
                   <div className="State">
@@ -89,11 +89,10 @@ function Live() {
                   </div>
                 </div>
                 <div className="Right_Team">
-                  {game.rightTeam}
+                  {game.rightTeam} - {game.rightPitcher}
+                <div className="right_logo">
                   {returnLogo(game.rightTeam)}
-
-                  -
-                  {game.rightPitcher}
+                </div>
                 </div>
               </div>
             </div>

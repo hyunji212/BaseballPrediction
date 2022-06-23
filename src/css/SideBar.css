@@ -1,8 +1,8 @@
 .sidebar {
-    display: grid;
-    background-color: #EBEFF7;
+    display: inline-grid;
+    background-color: white;
     height: 90vh;
-    width: 200px;
+    width: 16vw;
 }
 
 .sidebar-item-active {
@@ -29,7 +29,9 @@
     margin-left: 22px;
     font-size: 2vh;
     color: black;
-    font: bold;
+    font-weight: bold;
+    background-color: white;
+    float: left;
 }
 
 .sideBarTeam:hover{
@@ -39,4 +41,16 @@
 
 .sidebarlogo{
     margin-right: 10px;
+}
+
+.sidebar_title {
+    margin: 0;
+    margin-left: 1.5vw;
+    height: 3vh;
+    margin-top: 7vh;
+}
+
+.sidebar_logo_container {
+    float: left;
+    margin-left: 0
 }

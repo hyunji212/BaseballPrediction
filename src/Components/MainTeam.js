@@ -1,7 +1,6 @@
 import React from "react";
 import SideBar from "./sidebar";
 import TeamPrediction from "./TeamPrediction";
-import AutumnPredicion from "./AutumnPrediction";
 import Nav from "./Nav"
 
 function MainTeam() {
@@ -10,7 +9,6 @@ function MainTeam() {
       <Nav/>
       <SideBar/>
       <TeamPrediction/>
-      <AutumnPredicion/>
     </div>
   );
 }
