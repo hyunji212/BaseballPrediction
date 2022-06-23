@@ -20,13 +20,6 @@ body {
     padding-left: 70px;
   }
 
-.intro_text_top {
-  width: 40vw;
-  height: 70vh;
-  margin-top: 12vh;
-  margin-left: 8vw;
-  float: left;
-}
 
 .intro_text_top > h1 {
   color: black;
@@ -172,4 +165,18 @@ body {
     margin-left: 2vw;
     margin-top: 6vh;
     border-radius: 5px;
+}
+
+.Home_Ranking {
+  display: inline-block;
+  margin-left: 23vw;
+  margin-top: -30vh;
+}
+
+.intro_text_top {
+  width: 40vw;
+  height: 70vh;
+  margin-top: 12vh;
+  margin-left: 8vw;
+  display: inline-block;
 }

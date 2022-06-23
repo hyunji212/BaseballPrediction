@@ -44,10 +44,10 @@ function Live() {
   function returnLogo(team){
     if(['LG', 'SSG', 'KT'].includes(team)){
       const imgUrl = require("../img/logo/" + team +".png");
-      return (<img src={imgUrl} alt={team} style={{height:"6vh", width:"4vw"}}/>);
+      return (<img src={imgUrl} alt={team} style={{height:"40px", width:"80px"}}/>);
     } else{
       const imgUrl = require("../img/logo/" + team +".jpg");
-      return (<img src={imgUrl} alt={team} style={{height:"6vh", width:"4vw"}}/>);
+      return (<img src={imgUrl} alt={team} style={{height:"40px", width:"80px"}}/>);
     }
   }
 
