@@ -40,7 +40,7 @@
 }
 
 .service_container {
- background-color: blue;
- height: 12h;
-
+    background-color: blue;
+    height: 20vh;
+    margin-left: 50px;
 }
