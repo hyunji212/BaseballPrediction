@@ -3,6 +3,7 @@ import axios from '../request';
 import { useLocation } from 'react-router-dom';
 import Nav from "./Nav";
 import {NavLink} from "react-router-dom";
+import "../css/Player.css";
 
 function Player() {
 
@@ -51,16 +52,21 @@ if (!game) return null;
   return (
     <div>
       <Nav/>
-      <p><NavLink to={`/Player/${move_id}`}> {Player_Arr[move_id]} </NavLink> 보러가기</p>
-      <p>{title[id]}</p>
-      <p style={{whiteSpace: "pre-wrap"}}>{desc[id]}</p>
+      <div className="player_info">
+        <p className="other_player">
+          <p style={{fontSize:"18px"}}><NavLink to={`/Player/${move_id}`} className="linktootherside" style={{ textDecoration: 'none', fontSize: "18px", color:"black"}} > {Player_Arr[move_id]} </NavLink> 보러가기</p>
+        </p>
+        <p className="player_title">{title[id]}</p>
+        <p style={{whiteSpace: "pre-wrap"}}>{desc[id]}</p>
+      </div>
+      <div style={{width: "600px", height: "620px"}}>
       {
-        <table>
+        <table  style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "600px",height: "78vh", paddingTop: "25px"}}>
       {ranking_titles[id].map((title, index) => (
           <th>{title}</th>
       ))}
             {game.map((rank,idx)=>(
-               <tr>
+               <tr style={{textAlign: "center"}}>
                    <td>{rank.ranking}</td>
                    <td>{rank.ranking}</td>
                    <td>{rank.ranking}</td>
@@ -80,6 +86,7 @@ if (!game) return null;
 
         </table>
       }
+      </div>
     </div>
   );
 }
