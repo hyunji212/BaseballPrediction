@@ -34,11 +34,13 @@ function ServiceList(props) {
   
 
   return (
+    <div className='service_container'>
       <div className='Service_List'>
         <span>
           {content()}
         </span>
       </div>
+    </div>
   )
 }
 

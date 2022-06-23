@@ -3,6 +3,7 @@
     margin-top: 120px;
     height: 200px;
     padding: auto;
+    background-color: aqua;
 }
 
 .Big_Title {
@@ -17,9 +18,10 @@
 .Service_List {
     margin-top: 20px;
     text-align: center;
-    width: 400px;
-    display: inline-block;
+    width: 350px;
+    float: left;
     margin-left: 85px; 
+    background-color: red;
 }
 
 .Service_Img {
@@ -35,4 +37,10 @@
 .Service_Info {
    font-size: 2vh;
    color: black;
+}
+
+.service_container {
+ background-color: blue;
+ height: 12h;
+
 }
