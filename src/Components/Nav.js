@@ -20,9 +20,10 @@ function Nav() {
         <div className = "navheader">
         <div className="navlogo">
               <div>
-                <img className="nav_logo" src={logo} alt="logo"/>
+                <img className="nav_logo"  src={logo}  alt="logo"/>
               </div>
               <div className="navcomment">YBO</div>
+
         </div>
         <div className="nav">
             {Menu.map((menu, index) => {
