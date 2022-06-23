@@ -20,7 +20,7 @@ function Nav() {
         <div className = "navheader">
         <div className="navlogo">
                 <img className="nav_logo" src={logo} alt="logo"/>
-                <div className="navcomment">YBO</div>
+                <p className="navcomment">YBO</p>
         </div>
         <div className="nav">
             {Menu.map((menu, index) => {
