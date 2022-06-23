@@ -42,7 +42,6 @@ function Live() {
 
 
   function returnLogo(team){
-
     if(['LG', 'SSG', 'KT'].includes(team)){
       const imgUrl = require("../img/logo/" + team +".png");
       return (<img src={imgUrl} alt={team} style={{height:"40px", width:"80px", marginTop:"1vh"}}/>);
@@ -68,7 +67,9 @@ function Live() {
   function content(){
     if(code === 204){
       return(
-        <div className="monday">오늘은 경기가 없습니다</div>
+        <div className="monday_box">
+            <div className="monday">오늘은 경기가 없습니다</div>
+        </div>
       );}else{
         return(
          <div>
