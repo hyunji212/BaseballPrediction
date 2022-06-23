@@ -45,10 +45,10 @@ function Live() {
     console.log(team)
     if(['LG', 'SSG', 'KT'].includes(team)){
       const imgUrl = require("../img/logo/" + team +".png");
-      return (<img src={imgUrl} alt={team} style={{height:"40px", width:"80px"}}/>);
+      return (<img src={imgUrl} alt={team} style={{height:"40px", width:"80px", marginTop:"1vh"}}/>);
     } else{
       const imgUrl = require("../img/logo/" + team +".jpg");
-      return (<img src={imgUrl} alt={team} style={{height:"40px", width:"80px"}}/>);
+      return (<img src={imgUrl} alt={team} style={{height:"40px", width:"80px", marginTop:"1vh"}}/>);
     }
   }
 
