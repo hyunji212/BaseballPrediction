@@ -8,7 +8,6 @@ function MainTeam() {
   return (
     <div>
       <Nav/>
-      <SideBar/>
       <TeamPrediction/>
     </div>
   );

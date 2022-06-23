@@ -1,23 +1,26 @@
 .mainteam {
     display: inline-block;
     background: linear-gradient(180deg, #1E50CB 0%, rgba(32, 65, 149, 0) 100%);
-    width: 84vw;
-    height: 90vh;
+    width: 100vw;
+    height: 85vh;
 }
 
 .mainteam_title {
     font-size: 30px;
     font-weight: bold;
-    margin-top: 6vh;
+    margin-top: 3vh;
     text-align: center;
     color: white;
-    background-color: red;
 }
 
 .mainteam_ranking {
     width: 600px;
-    height: 620px;
-    margin-top: 43vh;
+    height: 20px;
+    margin-top: 32vh;
     margin-left: 15vw;
-    display: inline-block;
+    float: left;
+}
+
+.mainteam_sidebar {
+    float: left;
 }
