@@ -14,7 +14,6 @@ function Live() {
   let today_date =  now.getDate();
   const week = ["일","월","화","수","목","금","토"];
   let dayOfWeek = week[now.getDay()];
-  console.log(window.innerWidth)
   useEffect(()=>{
       const fetchTeam = async () => {
           try {
@@ -27,6 +26,7 @@ function Live() {
               setGame(response.data.data);
           } catch(e){
               setError(e);
+    
           }
           setLoading(false);
       };
@@ -42,6 +42,7 @@ function Live() {
 
 
   function returnLogo(team){
+    console.log(team)
     if(['LG', 'SSG', 'KT'].includes(team)){
       const imgUrl = require("../img/logo/" + team +".png");
       return (<img src={imgUrl} alt={team} style={{height:"6vh", width:"4vw"}}/>);
@@ -54,10 +55,10 @@ function Live() {
   function ShowScore(score){
     if(!score){
       return(
-        0
+        <>0</>
       ); } else{
         return (
-          {score}
+          <>{score}</>
         )
       }
     
