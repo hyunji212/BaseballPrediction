@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from '../request';
 import { useLocation } from 'react-router-dom';
 import Nav from "./Nav";
 import {NavLink} from "react-router-dom";
 
 function Player() {
+
+ const [game, setGame] = useState(null);
+ const [Loading, setLoading] = useState(false);
+ const [error, setError] = useState(null);
+
+
   const Player_Arr = ["OPS","ERA"];
   const title = ["OPS (출루율 + 장타율)", "ERA (평균 자책점)"]
   const desc = [" 'On-Base Plus Slugging' \n 출루율과 장타율을 더한 값으로, 득점에 많이 공헌하는 타자를 알 수 있습니다. \n\n 출루율은 (안타 + 볼넷 + 몸에 맞는 공) / (타수 + 볼넷 + 몸에 맞는 공 + 희생플라이) 로 정의되고, \n 장타율 = (단타 + 2루타X2 +3루타X3 + 홈런X4) 를 타수로 나눈 값입니다.",
@@ -11,6 +18,35 @@ function Player() {
   const location = useLocation();
   const id = Number(location.pathname.split("/")[2]);
   const move_id = ((id+1) % 2)
+  const ranking_titles =[["", "이름", "팀", "OPS", "게임수", "타석", "타율","안타", "홈런", "타점", "도루", "삼진" ,"병살" ,"WAR"],
+  ["","이름", "팀", 'ERA', '승', '패', '이닝', '실점', '자책','피안타','홈런', '볼넷', '삼진', 'WAR']]
+
+  useEffect(()=>{
+    const fetchTeam = async () => {
+        try {
+            setError(null);
+            setGame(null);
+            setLoading(false)
+            const Url = "/players/" + Player_Arr[id]
+            const response = await axios.get("/realtime-ranking");
+            setGame(response.data.data);
+        } catch(e){
+            console.log(e)
+            setError(e);
+  
+        }
+        setLoading(false);
+    };
+    
+    fetchTeam()
+}
+
+,[]);
+
+if (Loading) return <div>로딩중..</div>;
+if (error) return <div>에러가 발생했습니다</div>;
+if (!game) return null;
+
 
   return (
     <div>
@@ -18,6 +54,32 @@ function Player() {
       <p><NavLink to={`/Player/${move_id}`}> {Player_Arr[move_id]} </NavLink> 보러가기</p>
       <p>{title[id]}</p>
       <p style={{whiteSpace: "pre-wrap"}}>{desc[id]}</p>
+      {
+        <table>
+      {ranking_titles[id].map((title, index) => (
+          <th>{title}</th>
+      ))}
+            {game.map((rank,idx)=>(
+               <tr>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                   <td>{rank.ranking}</td>
+                    </tr> 
+            ))}
+
+        </table>
+      }
     </div>
   );
 }

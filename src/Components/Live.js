@@ -14,14 +14,14 @@ function Live() {
   let today_date =  now.getDate();
   const week = ["일","월","화","수","목","금","토"];
   let dayOfWeek = week[now.getDay()];
+
   useEffect(()=>{
       const fetchTeam = async () => {
           try {
               setError(null);
               setGame(null);
               setLoading(false)
-              const response = await axios.get("/realtime-game/");
-        
+              const response = await axios.get("/realtime-game");
               setCode(response.data.statusCode)
               setGame(response.data.data);
           } catch(e){
@@ -42,7 +42,7 @@ function Live() {
 
 
   function returnLogo(team){
-    console.log(team)
+
     if(['LG', 'SSG', 'KT'].includes(team)){
       const imgUrl = require("../img/logo/" + team +".png");
       return (<img src={imgUrl} alt={team} style={{height:"40px", width:"80px", marginTop:"1vh"}}/>);
