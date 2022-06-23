@@ -19,8 +19,10 @@ function Nav() {
     return (
         <div className = "navheader">
         <div className="navlogo">
+              <div>
                 <img className="nav_logo" src={logo} alt="logo"/>
-                <span className="navcomment">YBO</span>
+              </div>
+              <div className="navcomment">YBO</div>
         </div>
         <div className="nav">
             {Menu.map((menu, index) => {
