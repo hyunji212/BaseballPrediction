@@ -11,9 +11,11 @@ function MainPlayer() {
         <h1 className="Big_Title">선수 랭킹 확인</h1>
         <h4 className="Small_Content">선수들의 현재, 예상 정규 시즌 순위를 확인합니다.</h4>
       </div>
+      <div className="service_container">
       <ServiceList id="0" title="OPS"></ServiceList>
       <ServiceList id="2" title="Golden Glove"></ServiceList>
       <ServiceList id="1" title="ERA"></ServiceList>
+      </div>
     </div>
   );
 }
