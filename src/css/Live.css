@@ -21,31 +21,37 @@
 .Live_table {
     background-color: #EBEFF7;
     height: 70vh;
+    box-shadow: 0 5px 5px -5px #333;
+    border-radius: 3px 3px;
 }
 
 .Live_Each {
-    /*background-color: red;*/
-    margin-top: 10px;
+    margin-top: 1vh;
     height: 10vh;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 .Left_Team {
-    /*background-color: green;*/
     float: left;
-    margin-left: 1vw;
+    margin-left: 2.2vw;
+    height: 8vh;
+    font-weight: bold;
+    width: 10vw;
+    padding-top: 0.5vh;
 }
 
 .Right_Team {
-    /*background-color: orange;*/
     float: left;
+    height: 8vh;
+    font-weight: bold;
+    width: 10vw;
+    padding-top: 0.5vh;
 }
 
 .Score_Total {
-    /*background-color: pink;*/
     float: left;
-    margin-left: 12vw;
-    margin-right: 12vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     margin-top: 1vh;
 }
 
@@ -58,5 +64,17 @@
     float: left;
     background-color: white;
     height: 10vh;
-    width: 40vw;
+    width: 38vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    box-shadow: 0 5px 5px -5px #333;
+    border-radius: 2px 2px;
+}
+
+.monday {
+    font-weight: bold;
+    background-color: aquamarine;
+    font-size: large;
+    height: 4vh;
+    margin-top: 24vh;
 }

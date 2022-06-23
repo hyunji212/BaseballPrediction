@@ -12,15 +12,19 @@ function SideBar() {
   
   return (
     <div className="sidebar">
-        <h3>Team</h3>
+        <div className="sidebar_title">
+        <h3 style={{color: "#3C64B1"}}>TEAM</h3>
+        </div>
         {Team_Arr.map((team,idx)=> (
             <NavLink className="sideBarTeam" to={`/Team/${idx}`} key={idx} style={{ textDecoration: 'none'}}>
-              <img className="sidebarlogo" src={icon} style={{width:"2vh"}} alt="logo"/>
-              {idx===nowlocation ?(
-                <div style={{color:"#3C64B1"}}> {team} </div>
-              ) : (
-                <div> {team} </div>
-              )}
+                <div className="sidebar_logo_container">
+                <img className="sidebarlogo" src={icon} style={{width:"2vh", height:"2vh"}} alt="logo"/>
+                </div>
+                {idx===nowlocation ?(
+                  <div style={{color:"#3C64B1"}}> {team} </div>
+                ) : (
+                  <div> {team} </div>
+                )}
               </NavLink>
         ))}
     </div>
