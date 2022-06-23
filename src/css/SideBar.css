@@ -1,8 +1,8 @@
 .sidebar {
     display: inline-grid;
-    background-color: white;
     height: 90vh;
     width: 16vw;
+    background-color: white;
 }
 
 .sidebar-item-active {
@@ -30,7 +30,6 @@
     font-size: 2vh;
     color: black;
     font-weight: bold;
-    background-color: white;
     float: left;
 }
 
