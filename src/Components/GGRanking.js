@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from '../request';
+import "../css/GoldenGlove.css";
 
 
 function GGRanking(props) {
@@ -42,7 +43,7 @@ function GGRanking(props) {
     if(id===0){
         return(<>
         {Data.map((data,idx)=>(
-             <tr>
+             <tr style={{textAlign: "center"}}>
                  <td>{idx +1 }</td>
                  <td>{data.name}</td>
                  <td>{data.team}</td>
@@ -52,7 +53,7 @@ function GGRanking(props) {
         ))} </>);}else if(id===1){
             return(
                 <>  {Data.map((data)=>(
-                    <tr>
+                    <tr style={{textAlign: "center"}}>
                         <td>{data.position}</td>
                         <td>{data.name}</td>
                         <td>{data.team}</td>
@@ -62,7 +63,7 @@ function GGRanking(props) {
         } else {
             return(
                 <>  {Data.map((data, idx)=>(
-                    <tr>
+                    <tr style={{textAlign: "center"}}>
                      <td>{idx +1}</td>
                         <td>{data.name}</td>
                         <td>{data.team}</td>
@@ -76,13 +77,14 @@ function GGRanking(props) {
 
   return (
     <div>
-        <p>{titles[id]}</p>
-        <table>
-        {table_titles[id].map((title)=>(
-            <th>{title}</th>
-        ))}{content(id)}
-
-        </table>
+        <div className="GGRankingTable_title" style={{float:"left", fontWeight:"bold", fontSize:"30px", color:"white", marginLeft:"5vw"}}>{titles[id]}</div>
+        <div>
+            <table className="GGRankingTable" style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "340px",height: "72vh", paddingTop: "5px"}}>
+                {table_titles[id].map((title)=>(
+                    <th style={{verticalAlign:"middle"}}>{title}</th>
+                ))}{content(id)}
+            </table>
+        </div>
     </div>
   );
 }
