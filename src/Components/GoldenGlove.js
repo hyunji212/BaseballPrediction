@@ -10,9 +10,10 @@ function GoldenGlove() {
       <Nav/>
       <div className="glove_part">
       <p className="glove_title">Golden Glove</p>
-      <GGRanking id="0"/>
       <GGRanking id="1"/>
+      <GGRanking id="0"/>
       <GGRanking id="2"/>
+
       </div>
     </div>
   );

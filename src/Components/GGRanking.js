@@ -76,17 +76,20 @@ function GGRanking(props) {
         }
   }
 
+
   return (
-    <div>
-        <div className="GGRankingTable_title" style={{float:"left", fontWeight:"bold", fontSize:"30px", color:"white", marginLeft:"200px", position:"relative"}}>{titles[id]}</div>
+    
         <div>
+            <div className="GGRankingTable_title" >
+                {titles[id]}
+            </div>
             <table className="GGRankingTable">
                 {table_titles[id].map((title)=>(
                     <th style={{verticalAlign:"middle"}}>{title}</th>
                 ))}{content(id)}
             </table>
-        </div>
     </div>
+
   );
 }
 
