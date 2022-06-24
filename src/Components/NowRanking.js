@@ -33,11 +33,7 @@ function NowRanking() {
   if (!ranking) return null;
 
   return (
-<<<<<<< HEAD
-    <div className="Ranking" style={{width: "600px", height: "620px"}}>
-=======
     <div className="Ranking" style={{width: "100px", height: "620px"}}>
->>>>>>> 983c34cb99aab390130db7c411adf361dbe56c2a
         { <table className="Home_Table" style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "620px",height: "72vh", paddingTop: "5px"}}>
            {table_title.map((title)=>(
                <th className="Home_Table_Title">{title}</th>
