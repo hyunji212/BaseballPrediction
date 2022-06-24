@@ -16,7 +16,7 @@ function ServiceList(props) {
   function content(){
     if(id !== 2){
       return(
-        <NavLink to={`/player/${id}`} key={id} style={{ textDecoration: 'none'}}>
+        <NavLink to={`/Player/${id}`} key={id} style={{ textDecoration: 'none'}}>
         <img className='Service_Img' src={img[id]} alt={title[id]}/>
         <div className='Service_Name'>{title[id]}</div>
         <div className='Service_Info'>{desc[id]}</div>
