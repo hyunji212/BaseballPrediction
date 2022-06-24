@@ -50,6 +50,7 @@ function GGRanking(props) {
                  <td>{data.predictEra}</td>
                 </tr> 
         ))} </>);}else if(id===1){
+            console.log(Data)
             return(
                 <>  {Data.map((data)=>(
                     <tr>
