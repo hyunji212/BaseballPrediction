@@ -169,8 +169,9 @@ body {
 
 .Home_Ranking {
   display: inline-block;
-  margin-left: 23vw;
-  margin-top: -26vh;
+  margin-left: 45vw;
+  margin-top: -60vh;
+  width: 0.1vw;
 }
 
 .intro_text_top {
