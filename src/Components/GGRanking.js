@@ -43,7 +43,7 @@ function GGRanking(props) {
         return(<>
         {Data.map((data,idx)=>(
              <tr>
-                 <td>{idx}</td>
+                 <td>{idx +1 }</td>
                  <td>{data.name}</td>
                  <td>{data.team}</td>
                  <td>{data.era}</td>
@@ -61,12 +61,13 @@ function GGRanking(props) {
             )
         } else {
             return(
-                <>  {Data.map((data)=>(
+                <>  {Data.map((data, idx)=>(
                     <tr>
+                     <td>{idx +1}</td>
                         <td>{data.name}</td>
                         <td>{data.team}</td>
                         <td>{data.ops}</td>
-                        <td>{data.predicOps}</td>
+                        <td>{data.predictOps}</td>
                        </tr> 
                ))} </>
             )
