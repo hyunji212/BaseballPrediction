@@ -114,9 +114,11 @@
     margin-left: 5vw;
 }
 
+
 .main_player_img_box {
     width: 500px;
-    height: 412px;
+    height: 450px;
+    object-fit: cover;
     margin-top: 9vh;
     margin-left: -3vw;
     background-color: red;
@@ -127,36 +129,41 @@
 }
 
 .one {
-    margin-top: 16.5vh;
-    margin-bottom: 6vh;
-    margin-left: 1vw;
+    position: relative;
+    top: 135px;
     font-weight: bold;
     font-size: 23px;
 }
 
 .two {
+    position: relative;
+    top:170px;
+    left: 100px;
     font-weight: bold;
     font-size: 23px;
-    margin-left: 8.3vw;
-    margin-bottom: 7vh;
+
 }
 
 .three {
+    position: relative;
+    top:230px;
     font-weight: bold;
     font-size: 23px;
-    margin-left: 5vw;
+    left: 52px;
 }
 
 .four {
+    position: relative;
+    top: 230px;
     font-weight: bold;
     font-size: 23px;
-    margin-bottom: 3vh;
-    margin-left: 11.9vw;
+    left:160px;
 }
 
 .five {
     font-weight: bold;
     font-size: 23px;
-    margin-left: 11.9vw;
-    margin-top: 1.8vh;
+    position: relative;
+    top: 280px;
+    left: 160px;
 }
