@@ -33,12 +33,12 @@ function NowRanking() {
   if (!ranking) return null;
 
   return (
-    <div className="Home_Ranking" style={{width: "600px", height: "620px"}}>
+    <div className="Ranking" style={{width: "600px", height: "620px"}}>
         { <table className="Home_Table" style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "620px",height: "72vh", paddingTop: "5px"}}>
            {table_title.map((title)=>(
                <th className="Home_Table_Title">{title}</th>
            ))}
-            {ranking.map((rank,idx)=>(
+            {ranking.map((rank)=>(
                <tr className="Table_Content" style={{textAlign: "center"}}>
                    <td>{rank.ranking}</td>
                    <td>{rank.team}</td>

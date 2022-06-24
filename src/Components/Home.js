@@ -25,13 +25,15 @@ function Home() {
           <h4>MY TEAM으로 이동해 보세요</h4>
           <div className="teamcontainer">
               {Team_Arr.map((team,idx)=> (
+            
                   <NavLink to={`/Team/${idx}`} key={idx} style={{ textDecoration: 'none'}}>
-                  <button className="teamselect" style={{height:"4.5vh" , width: "6vw"}}> {team}</button> 
+                     <Button className="teamselect"> {team} </Button>
                   </NavLink>
+           
             ))}</div>
-          <div className="Home_Ranking">
+
             <NowRanking/>
-          </div>
+        
       </div>    
     </div>
     <Live/>
