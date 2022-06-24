@@ -31,9 +31,15 @@ function Home() {
                   </NavLink>
            
             ))}</div>
+<<<<<<< HEAD
             <div className="Home_Ranking">
             <NowRanking/>
             </div>
+=======
+        <div className="Home_Ranking">
+            <NowRanking/>
+        </div>
+>>>>>>> 5aff4ff69badd7b467034ec8323ccd2966b51155
       </div>    
     </div>
     <Live/>
