@@ -20,7 +20,6 @@ function HomeRanking(props) {
                           setError(null);
                           setGame(null);
                           setLoading(false)
-                          //const Url = "/players/" + Player_Arr[id]
                           const response = await axios.get("/realtime-ranking");
                           setGame(response.data.data);
                       } catch(e){
