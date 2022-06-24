@@ -13,7 +13,7 @@ function Home() {
   const Team_Arr = ["KIA","롯데","삼성","두산","LG","SSG","한화","키움","NC","kt"];
 
   return (
-    <div style={{overflowX: 'hidden'}}>
+    <div  style={{overflowX: 'hidden'}}>
      <div className="intro" style={{overflowX: 'hidden'}}>
       <Nav/>                 
        <div className="intro_text_top">

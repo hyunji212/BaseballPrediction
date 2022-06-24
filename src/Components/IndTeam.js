@@ -68,7 +68,10 @@ function IndTeam(props) {
       <div className="mention_container">
         {mention()}
       </div>
-      <div>
+      <div className="wordcloud_title">
+        팀별 여론
+      </div>
+      <div className="wordcloud_container">
         {wordcloud()}
       </div>
     </div>
