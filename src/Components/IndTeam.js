@@ -1,4 +1,10 @@
 import React from "react";
+import "../css/Team.css";
+import SideBar from "./sidebar";
+import win from "../img/트로피.png";
+import top from "../img/최고.png"
+import worst from "../img/최저.png"
+import now from "../img/현재순위.png"
 
 function IndTeam(props) {
 
@@ -16,20 +22,55 @@ function IndTeam(props) {
     const imgURL = require("../img/그래프/" + Team_Arr[Number(props.id)] + ".png")
     return(
       <>
-      <img src={imgURL} alt={Team_Arr[Number(props.id)]} style={{width:"60vw"}}/>
+      <img src={imgURL} alt={Team_Arr[Number(props.id)]} style={{width:"70vw", marginLeft:"7vw"}}/>
       </>
     );
   }
   return (
-    <div>
-      {props.team}
-      <div>역대 우승 횟수 <br/> 8 </div>
-      <div>현재 순위 <br/> 1 </div>
-      <div>시즌 최고 순위 <br/> 1 </div>
-      <div>시즌 최하 순위 <br/> 1 </div>
-      {mention()}
-      {wordcloud()}
+    <div className="IndTeam_part">
+      <div className="IndTeam_sidebar">
+        <SideBar/>
+      </div>
+      <div className="Team_First">
 
+        <div className="Team_First_Info_Container">
+        <div className="Team_First_logo_container">
+         <img className="Team_First_logo" src={win} style={{width:"4.5vh", height:"4.5vh"}} alt=""/>
+        </div>
+        <div className="Team_First_Info">역대 우승 횟수 <br/> <span style={{color: "#3C64B1"}}>8</span> </div>
+        </div>
+
+        <div className="Team_First_Info_Container">
+        <div className="Team_First_logo_container">
+          <img className="Team_First_logo" src={now} style={{width:"4.5vh", height:"4.5vh"}} alt=""/>
+        </div>
+        <div className="Team_First_Info">현재 순위 <br/> <span style={{color: "#3C64B1"}}>1 </span></div>
+        </div>
+
+        <div className="Team_First_Info_Container">
+        <div className="Team_First_logo_container">
+          <img className="Team_First_logo" src={top} style={{width:"4.5vh", height:"4.5vh"}} alt=""/>
+        </div>
+        <div className="Team_First_Info">시즌 최고 순위 <br/> <span style={{color: "#3C64B1"}}>1</span> </div>
+        </div>
+
+        <div className="Team_First_Info_Container">
+        <div className="Team_First_logo_container">
+          <img className="Team_First_logo" src={worst} style={{width:"4.5vh", height:"4.5vh"}} alt=""/>
+        </div>
+        <div className="Team_First_Info">시즌 최하 순위 <br/> <span style={{color: "#3C64B1"}}>1 </span></div>
+        </div>
+
+      </div>
+      <div className="mention_title">
+        팀별 언급량
+      </div>
+      <div className="mention_container">
+        {mention()}
+      </div>
+      <div>
+        {wordcloud()}
+      </div>
     </div>
   );
 }
