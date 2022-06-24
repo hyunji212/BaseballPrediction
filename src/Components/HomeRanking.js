@@ -48,17 +48,10 @@ function HomeRanking(props) {
       {title[id].map((title) => (
           <th>{title}</th>
       ))}
-         {game.map((rank)=>(
-          <tr style={{textAlign: "center"}}>
-              <td>{rank.ranking}</td>
-              <td>{rank.ranking}</td>
-              <td>{rank.ranking}</td>
-              <td>{rank.ranking}</td>
-              <td>{rank.ranking}</td>
-              <td>{rank.ranking}</td>
-              <td>{rank.ranking}</td>
-          </tr>
-     )) }
+        <tr><tb>1</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb></tr>
+        <tr><tb>1</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb></tr>
+        <tr><tb>1</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb><tb>김광현(0.789)</tb></tr>
+
      </table>
     </div>
   );

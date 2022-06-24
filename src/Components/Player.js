@@ -47,13 +47,61 @@ function Player() {
 
 ,[id]);
 
+
 if (Loading) return <div>로딩중..</div>;
 if (error) return <div>에러가 발생했습니다</div>;
 if (!game) return null;
 
+function content(id){
+  if(id===0){
+    return(<>
+    {game.map((rank,idx)=>(
+         <tr style={{textAlign: "center", verticalAlign: "middle", lineHeight:"300%", fontSize:"18px"}}>
+          <td className="Player_Table_Content">{idx}</td>
+          <td className="Player_Table_Content">{rank.name}</td>
+          <td className="Player_Table_Content">{rank.team}</td>
+          <td className="Player_Table_Content">{rank.ops}</td>
+          <td className="Player_Table_Content">{rank.games}</td>
+          <td className="Player_Table_Content">{rank.pa}</td>
+          <td className="Player_Table_Content">{rank.ba}</td>
+          <td className="Player_Table_Content">{rank.hit}</td>
+          <td className="Player_Table_Content">{rank.homerun}</td>
+          <td className="Player_Table_Content">{rank.rbi}</td>
+          <td className="Player_Table_Content">{rank.steal}</td>
+          <td className="Player_Table_Content">{rank.strikeout}</td>
+          <td className="Player_Table_Content">{rank.dp}</td>
+          <td className="Player_Table_Content">{rank.war}</td>
+            </tr> 
+    ))} </>);}
+  else{
+    return(
+      <>
+      {game.map((rank,idx)=>(
+       <tr style={{textAlign: "center", verticalAlign: "middle", lineHeight:"300%", fontSize:"18px"}}>
+       <td className="Player_Table_Content">{idx}</td>
+       <td className="Player_Table_Content">{rank.name}</td>
+       <td className="Player_Table_Content">{rank.team}</td>
+       <td className="Player_Table_Content">{rank.era}</td>
+       <td className="Player_Table_Content">{rank.win}</td>
+       <td className="Player_Table_Content">{rank.lose}</td>
+       <td className="Player_Table_Content">{rank.inning}</td>
+       <td className="Player_Table_Content">{rank.runs}</td>
+       <td className="Player_Table_Content">{rank.earnedRun}</td>
+       <td className="Player_Table_Content">{rank.hit}</td>   
+       <td className="Player_Table_Content">{rank.homerun}</td>
+       <td className="Player_Table_Content">{rank.bb}</td>
+       <td className="Player_Table_Content">{rank.strikeout}</td>
+       <td className="Player_Table_Content">{rank.war}</td>
+ 
+                        </tr> 
+                ))} </>
+    );
+  }
+}
+
 
   return (
-    <div  style={{backgroundColor:"#EBEFF7", height:"200vh"}}>
+    <div  style={{backgroundColor:"#EBEFF7", height:"1000vh"}}>
       <Nav/>
         <div className="Page_Player">
           <div className="player_info">
@@ -70,24 +118,7 @@ if (!game) return null;
           {ranking_titles[id].map((title) => (
               <th className="Player_Table_Title">{title}</th>
           ))}</thead> <tbody>
-                {game.map((rank,idx)=>(
-                  <tr style={{textAlign: "center", verticalAlign: "middle", lineHeight:"300%", fontSize:"18px"}}>
-                      <td className="Player_Table_Content">{idx}</td>
-                      <td className="Player_Table_Content">{rank.name}</td>
-                      <td className="Player_Table_Content">{rank.team}</td>
-                      <td className="Player_Table_Content">{rank.name}</td>
-                      <td className="Player_Table_Content">{rank.name}</td>
-                      <td className="Player_Table_Content">{rank.team}</td>
-                      <td className="Player_Table_Content">{rank.name}</td>
-                      <td className="Player_Table_Content">{rank.team}</td>
-                      <td className="Player_Table_Content">{rank.name}</td>
-                      <td className="Player_Table_Content">{rank.team}</td>
-                      <td className="Player_Table_Content">{rank.name}</td>
-                      <td className="Player_Table_Content">{rank.team}</td>
-                      <td className="Player_Table_Content">{rank.name}</td>
-                      <td className="Player_Table_Content">{rank.team}</td>
-                        </tr> 
-                ))} 
+               {content(id)}
                 </tbody>
             </table>
           }
