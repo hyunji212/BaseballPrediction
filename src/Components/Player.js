@@ -60,9 +60,9 @@ if (!game) return null;
         <p style={{whiteSpace: "pre-wrap" , lineHeight:"150%"}}>{desc[id]}</p>
       </p>
       </div>
-      <div style={{width: "600px", height: "620px"}}>
+      <div style={{position:"relative", left:"7vw"}}>
       {
-        <table  style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "600px", paddingTop: "15px"}}>
+        <table  style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "80vw", paddingTop: "15px"}}>
       {ranking_titles[id].map((title) => (
           <th>{title}</th>
       ))}
@@ -86,7 +86,7 @@ if (!game) return null;
             ))}
 
         </table>
-      }
+}
       </div>
     </div>
   );
