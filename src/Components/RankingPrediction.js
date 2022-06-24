@@ -34,12 +34,12 @@ function RankingPrediction() {
 
   return (
     <div>
-        { <table>
+        { <table style={{backgroundColor: "white", marginlLeft:"30vw", marginRight:"auto", borderRadius: "10px 10px 10px 10px", width: "200px",height: "72vh", paddingTop: "5px"}}>
            {table_title.map((title)=>(
-               <th className="Home_Table_Title">{title}</th>
+               <th className="Prediction_Table_Title" style={{verticalAlign:"middle"}}>{title}</th>
            ))}
             {ranking.map((rank)=>(
-               <tr className="Table_Content" style={{textAlign: "center"}}>
+               <tr className="Prediction_Table_Content" style={{textAlign: "center"}}>
                    <td>{rank.ranking}</td>
                    <td>{rank.team}</td>
                </tr> 

@@ -38,6 +38,10 @@ function Home() {
       </div>    
     </div>
     <Live/>
+    <div className="Home_Player_Ranking_Page">
+          <HomeRanking id="0"/>
+          <HomeRanking id="1"/>
+    </div>
     <div className="intro_Container">
         <div className="intro_text">
             <h1>KBO 리그 순위 예측</h1>
@@ -53,10 +57,7 @@ function Home() {
             <img className="MainPageGraph" src={Graph} alt="graph"/>
         </div>
     </div>
-    <div className="Home_Player_Ranking_Page">
-          <HomeRanking id="0"/>
-          <HomeRanking id="1"/>
-    </div>
+ 
     </div>
   );
 }

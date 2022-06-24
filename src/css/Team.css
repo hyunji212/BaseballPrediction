@@ -1,3 +1,4 @@
+
 .Team_First {
     float: left;
     margin-top: 3vh;
@@ -60,7 +61,7 @@
     margin-top: 3.2vh;
     text-align: right;
     font-size: 20px;
-    padding-right: 19vw;
+    padding-right: 30vw;
 }
 
 .Home_Player_Ranking_Page {
@@ -83,7 +84,6 @@
     margin-bottom: 2vh;
     padding-top: 1vh;
     line-height: 100%;
-
 }
 
 .Home_Player_Ranking_Table_Content {
@@ -98,7 +98,30 @@
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
     padding-top: 8vh;
     margin-bottom: -3vh;
+}
+
+.main_player_title {
+    color: black;
+    font-weight: bold;
+    margin-top: 3.2vh;
+    text-align: right;
+    font-size: 20px;
+    padding-left: 5vw;
+    float: left;
+    margin-left: 5vw;
+}
+
+.main_player_img_box {
+    width: 500px;
+    height: 412px;
+    margin-top: 9vh;
+    margin-left: -4vw;
+    background-color: red;
+    float: left;
+    padding-left: 5vw;
+    background-image: url('../img/야구장.png');
+    background-size: 565px 430px;
 }

@@ -68,10 +68,8 @@ const RealTitle= ["타자 랭킹", "투수 랭킹"]
       <div className="Home_Player_Ranking_Table_Total">
       {title[id].map((title) => (
           <th className="Home_Player_Ranking_Table_Title" style={{borderBottom:"2px solid gray",paddingBottom:"0.8vh"}}>{title}</th>
-      ))}{content(id)}
-        </div>
-        <br></br>
-     </table>
+      ))}{content(id)}   </div>
+     </table><br></br>
     </div>
     </div>
   );

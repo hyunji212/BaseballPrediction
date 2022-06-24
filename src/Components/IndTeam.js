@@ -13,7 +13,7 @@ function IndTeam(props) {
     const imgURL = require("../img/WC/" + Team_Arr[Number(props.id)] + ".png")
     return(
       <>
-      <img src={imgURL} alt={Team_Arr[Number(props.id)]}/>
+      <img src={imgURL} style={{width:"445px", height:"430px"}}alt={Team_Arr[Number(props.id)]}/>
       </>
     );
   }
@@ -37,28 +37,28 @@ function IndTeam(props) {
         <div className="Team_First_logo_container">
          <img className="Team_First_logo" src={win} style={{width:"4.5vh", height:"4.5vh"}} alt=""/>
         </div>
-        <div className="Team_First_Info">역대 우승 횟수 <br/> <span style={{color: "#3C64B1"}}>8</span> </div>
+        <div className="Team_First_Info">역대 우승 횟수 <br/> <span style={{color: "#3C64B1", lineHeight:"3.5vh"}}>8</span> </div>
         </div>
 
         <div className="Team_First_Info_Container">
         <div className="Team_First_logo_container">
           <img className="Team_First_logo" src={now} style={{width:"4.5vh", height:"4.5vh"}} alt=""/>
         </div>
-        <div className="Team_First_Info">현재 순위 <br/> <span style={{color: "#3C64B1"}}>1 </span></div>
+        <div className="Team_First_Info">현재 순위 <br/> <span style={{color: "#3C64B1", lineHeight:"3.5vh"}}>1 </span></div>
         </div>
 
         <div className="Team_First_Info_Container">
         <div className="Team_First_logo_container">
           <img className="Team_First_logo" src={top} style={{width:"4.5vh", height:"4.5vh"}} alt=""/>
         </div>
-        <div className="Team_First_Info">시즌 최고 순위 <br/> <span style={{color: "#3C64B1"}}>1</span> </div>
+        <div className="Team_First_Info">시즌 최고 순위 <br/> <span style={{color: "#3C64B1", lineHeight:"3.5vh"}}>1</span> </div>
         </div>
 
         <div className="Team_First_Info_Container">
         <div className="Team_First_logo_container">
           <img className="Team_First_logo" src={worst} style={{width:"4.5vh", height:"4.5vh"}} alt=""/>
         </div>
-        <div className="Team_First_Info">시즌 최하 순위 <br/> <span style={{color: "#3C64B1"}}>1 </span></div>
+        <div className="Team_First_Info">시즌 최하 순위 <br/> <span style={{color: "#3C64B1", lineHeight:"3.5vh"}}>1 </span></div>
         </div>
 
       </div>
@@ -68,9 +68,16 @@ function IndTeam(props) {
       <div className="mention_container">
         {mention()}
       </div>
-      <div>
-        
+       
+      <div className="main_player_title">
+         주전
       </div>
+      <div className="main_player_container">
+        <div className="main_player_img_box">
+          <div className="top"></div>
+        </div>
+      </div>
+
       <div className="wordcloud_title">
         팀별 여론
       </div>
