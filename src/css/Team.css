@@ -73,7 +73,6 @@
     margin-left: 9vw;
     margin-top: 6vh;
     width: 80vw;
-    height: 25vh;
     border-radius: 12px;
     box-shadow: 0 5px 5px -5px #333;
 }
@@ -82,12 +81,16 @@
     font-size: 20px;
     width: 50vw;
     margin-bottom: 2vh;
+    padding-top: 1vh;
+    line-height: 200%;
+
 }
 
 .Home_Player_Ranking_Table_Content {
     font-size: 20px;
     width: 50vw;
     text-align: center;
+    line-height: 300%;
     padding-top: 3vh;
 }
 

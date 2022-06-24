@@ -8,11 +8,11 @@ function HomeRanking(props) {
  const [game, setGame] = useState(null);
  const [Loading, setLoading] = useState(false);
  const [error, setError] = useState(null);
-const RealTitle= ["선수별 랭킹 1", "선수별 랭킹 2"]
+const RealTitle= ["타자 랭킹", "투수 랭킹"]
 
   const id = Number(props.id);
-  const title = [["항목","타율","출루율","장타율","타점","득점","홈런"],
-                ["항목","다승","세이브","홀드","삼진","도루","방어율"]] 
+  const title = [["항목","타율","출루율","장타율","타점","득점","홈런","도루"],
+                ["항목","다승","세이브","홀드","삼진","방어율"]] 
 
                 useEffect(()=>{
                   const fetchTeam = async () => {
@@ -34,12 +34,31 @@ const RealTitle= ["선수별 랭킹 1", "선수별 랭킹 2"]
               }
               
               ,[]);
+  function content(id){
+      if(id===0){
+          return(
+              <>
+            <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+            <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+            <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+            </>
+            )
+      }else{
+          return(
+            <>
+            <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+            <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+            <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+            </>
+          )
+      }
+  }
               
   if (Loading) return <div>로딩중..</div>;
   if (error) return <div>에러가 발생했습니다</div>;
   if (!game) return null;
               
-              
+        
 
   return (
     <div>
@@ -49,10 +68,7 @@ const RealTitle= ["선수별 랭킹 1", "선수별 랭킹 2"]
       <div className="Home_Player_Ranking_Table_Total">
       {title[id].map((title) => (
           <th className="Home_Player_Ranking_Table_Title" style={{borderBottom:"2px solid gray",paddingBottom:"0.8vh"}}>{title}</th>
-      ))}
-        <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
-        <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
-        <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+      ))}{content(id)}
         </div>
      </table>
     </div>
