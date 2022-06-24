@@ -180,3 +180,12 @@ body {
   margin-left: 8vw;
   display: inline-block;
 }
+
+.Home_Table{
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+.Home_Table_Title{
+  vertical-align: middle;
+}

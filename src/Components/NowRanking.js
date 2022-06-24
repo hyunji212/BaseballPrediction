@@ -26,14 +26,18 @@ function NowRanking() {
 
   ,[]);
 
+  const table_title = ["순위","팀","경기","승 - 패 - 무","승률","게임 차","연속"]
+
   if (Loading) return <div>로딩중..</div>;
   if (error) return <div>에러가 발생했습니다</div>;
   if (!ranking) return null;
 
   return (
     <div className="Home_Ranking" style={{width: "600px", height: "620px"}}>
-        { <table className="Home_Table" style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "600px",height: "70vh", paddingTop: "25px"}}>
-           <th>순위</th><th>팀</th><th>경기</th><th>승 - 패 - 무</th><th>승률</th><th>게임 차</th><th>연속</th>
+        { <table className="Home_Table" style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "620px",height: "72vh", paddingTop: "5px"}}>
+           {table_title.map((title)=>(
+               <th className="Home_Table_Title">{title}</th>
+           ))}
             {ranking.map((rank,idx)=>(
                <tr className="Table_Content" style={{textAlign: "center"}}>
                    <td>{rank.ranking}</td>
