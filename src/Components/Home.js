@@ -57,7 +57,11 @@ function Home() {
             <img className="MainPageGraph" src={Graph} alt="graph"/>
         </div>
     </div>
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> c0f4dbe34d0d1828baae19a4306a5d69af1a3f7b
     </div>
   );
 }
