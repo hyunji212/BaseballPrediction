@@ -27,7 +27,7 @@ function Player() {
             setError(null);
             setGame(null);
             setLoading(false)
-            const Url = "/players/" + Player_Arr[id]
+            //const Url = "/players/" + Player_Arr[id]
             const response = await axios.get("/realtime-ranking");
             setGame(response.data.data);
         } catch(e){
@@ -56,10 +56,10 @@ if (!game) return null;
       <p style={{whiteSpace: "pre-wrap"}}>{desc[id]}</p>
       {
         <table>
-      {ranking_titles[id].map((title, index) => (
+      {ranking_titles[id].map((title) => (
           <th>{title}</th>
       ))}
-            {game.map((rank,idx)=>(
+            {game.map((rank)=>(
                <tr>
                    <td>{rank.ranking}</td>
                    <td>{rank.ranking}</td>

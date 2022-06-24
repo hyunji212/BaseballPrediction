@@ -11,6 +11,15 @@ function IndTeam(props) {
       </>
     );
   }
+
+  function mention(){
+    const imgURL = require("../img/그래프/" + Team_Arr[Number(props.id)] + ".png")
+    return(
+      <>
+      <img src={imgURL} alt={Team_Arr[Number(props.id)]} style={{width:"60vw"}}/>
+      </>
+    );
+  }
   return (
     <div>
       {props.team}
@@ -18,6 +27,7 @@ function IndTeam(props) {
       <div>현재 순위 <br/> 1 </div>
       <div>시즌 최고 순위 <br/> 1 </div>
       <div>시즌 최하 순위 <br/> 1 </div>
+      {mention()}
       {wordcloud()}
 
     </div>
