@@ -44,7 +44,7 @@
 
 .wordcloud_container {
     margin-top: 0.5vw;
-    margin-left: 63vw;
+    margin-left: 64vw;
 }
 
 .mention_title {
@@ -118,10 +118,10 @@
     width: 500px;
     height: 412px;
     margin-top: 9vh;
-    margin-left: -4vw;
+    margin-left: -3vw;
     background-color: red;
     float: left;
     padding-left: 5vw;
     background-image: url('../img/야구장.png');
-    background-size: 565px 430px;
+    background-size: 565px 425px;
 }
