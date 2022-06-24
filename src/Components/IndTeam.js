@@ -74,7 +74,11 @@ function IndTeam(props) {
       </div>
       <div className="main_player_container">
         <div className="main_player_img_box">
-          <div className="top"></div>
+          <div className="1st">좌익수 중견수 우익수</div>
+          <div className="2nd">유격수 2루수</div>
+          <div className="3rd">3루수 1루수</div>
+          <div className="4th">투수</div>
+          <div className="5th">포수 지명타자</div>
         </div>
       </div>
 
