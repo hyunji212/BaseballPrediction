@@ -31,9 +31,9 @@ function Home() {
                   </NavLink>
            
             ))}</div>
-
+            <div className="Home_Ranking">
             <NowRanking/>
-        
+            </div>
       </div>    
     </div>
     <Live/>
