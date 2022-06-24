@@ -52,42 +52,43 @@ if (!game) return null;
   return (
     <div>
       <Nav/>
-      <div className="player_info">
+        <div className="Page_Player" style={{backgroundColor:"#EBEFF7"}}>
+          <div className="player_info">
+            <span className="other_player" style={{fontSize:"18px"}}><NavLink to={`/Player/${move_id}`} className="linktootherside" style={{textDecoration:"None", fontSize: "18px", color:"black"}} > {Player_Arr[move_id]}</NavLink> 보러가기</span>
+            <p style={{position:"relative", top:"8px"}}>
+            <p className="player_title">{title[id]}</p>
+            <p style={{whiteSpace: "pre-wrap" , lineHeight:"150%"}}>{desc[id]}</p>
+          </p>
+          </div>
+          <div style={{width: "600px", height: "620px"}}>
+          {
+            <table  style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "600px", paddingTop: "15px"}}>
+          {ranking_titles[id].map((title) => (
+              <th>{title}</th>
+          ))}
+                {game.map((rank)=>(
+                  <tr style={{textAlign: "center", verticalAlign: "middle"}}>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                      <td>{rank.ranking}</td>
+                        </tr> 
+                ))}
 
-          <span className="other_player" style={{fontSize:"18px"}}><NavLink to={`/Player/${move_id}`} className="linktootherside" style={{textDecoration:"None", fontSize: "18px", color:"black"}} > {Player_Arr[move_id]}</NavLink> 보러가기</span>
-      <p style={{position:"relative", top:"8px"}}>
-        <p className="player_title">{title[id]}</p>
-        <p style={{whiteSpace: "pre-wrap" , lineHeight:"150%"}}>{desc[id]}</p>
-      </p>
-      </div>
-      <div style={{width: "600px", height: "620px"}}>
-      {
-        <table  style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "600px", paddingTop: "15px"}}>
-      {ranking_titles[id].map((title) => (
-          <th>{title}</th>
-      ))}
-            {game.map((rank)=>(
-               <tr style={{textAlign: "center"}}>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                   <td>{rank.ranking}</td>
-                    </tr> 
-            ))}
-
-        </table>
-      }
-      </div>
+            </table>
+          }
+          </div>
+          </div>
     </div>
   );
 }
