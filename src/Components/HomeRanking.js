@@ -8,7 +8,7 @@ function HomeRanking(props) {
  const [game, setGame] = useState(null);
  const [Loading, setLoading] = useState(false);
  const [error, setError] = useState(null);
-
+const RealTitle= ["선수별 랭킹 1", "선수별 랭킹 2"]
 
   const id = Number(props.id);
   const title = [["항목","타율","출루율","장타율","타점","득점","홈런"],
@@ -44,15 +44,19 @@ function HomeRanking(props) {
 
   return (
     <div>
-      <table className="Home_Player_Ranking_Table">
+    <div className="Home_Player_Ranking_Page_Title">{RealTitle[id]}</div>
+    <div>
+      <table style={{borderCollapse:"collapse"}}>
+      <div className="Home_Player_Ranking_Table_Total">
       {title[id].map((title) => (
-          <th>{title}</th>
+          <th className="Home_Player_Ranking_Table_Title" style={{borderBottom:"2px solid gray",paddingBottom:"0.8vh"}}>{title}</th>
       ))}
-        <tr><td>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
-        <tr><td>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
-        <tr><td>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
-
+        <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+        <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+        <tr className="Home_Player_Ranking_Table_Content"><td style={{padding:"10px 10px 10px 10px"}}>1</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td><td>김광현(0.789)</td></tr>
+        </div>
      </table>
+    </div>
     </div>
   );
 }

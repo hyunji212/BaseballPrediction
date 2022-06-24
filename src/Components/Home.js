@@ -54,12 +54,8 @@ function Home() {
         </div>
     </div>
     <div className="Home_Player_Ranking_Page">
-        <div className="Home_Player_Ranking_Graph_1">
           <HomeRanking id="0"/>
-        </div>
-        <div className="Home_Player_Ranking_Graph_2">
           <HomeRanking id="1"/>
-        </div>
     </div>
     </div>
   );
