@@ -1,0 +1,50 @@
+.Team_First {
+    float: left;
+    margin-top: 3vh;
+}
+
+.Team_First_Info {
+    float: left;
+    margin-left: 2.5vw;
+    margin-top: 2vh;
+}
+
+.Team_First_Info_Container {
+    float: left;
+    background-color: white;
+    width: 15vw;
+    height: 10vh;
+    margin-left: 5vw;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 5px 5px -5px #333;
+}
+
+.IndTeam_part {
+    display: inline-block;
+    background-color: #EBEFF7;
+    width: 100%;
+}
+
+.IndTeam_sidebar {
+    float: left;
+}
+
+.Team_First_logo_container {
+    float: left;
+    margin-left: 1.5vw;
+    margin-top: 2vh;
+}
+
+.mention_container {
+    margin-top: 0.5vw;
+}
+
+.mention_title {
+    color: black;
+    font-weight: bold;
+    margin-top: 17vh;
+    text-align: center;
+    font-size: 20px;
+}

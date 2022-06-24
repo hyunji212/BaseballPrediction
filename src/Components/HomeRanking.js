@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from '../request';
+import "../css/Home.css";
 
 function HomeRanking(props) {
 
@@ -42,8 +43,8 @@ function HomeRanking(props) {
               
 
   return (
-    <div>
-      <table>
+    <div className="Home_Player_Ranking">
+      <table className="Home_Player_Ranking_Table">
       {title[id].map((title) => (
           <th>{title}</th>
       ))}

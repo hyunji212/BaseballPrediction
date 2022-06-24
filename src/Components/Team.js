@@ -13,7 +13,6 @@ function Team() {
 
     <div>
       <Nav/>
-      <SideBar/>
       <IndTeam team={Team_Arr[id]} id={id}></IndTeam>
     </div>
   );
