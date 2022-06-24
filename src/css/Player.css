@@ -1,0 +1,17 @@
+.player_title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.player_info {
+
+    margin-left: 8vw;
+}
+
+.other_player {
+    margin-left: 0;
+    height: 3vh;
+    color: black;
+}
