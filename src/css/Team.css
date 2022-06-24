@@ -125,3 +125,38 @@
     background-image: url('../img/야구장.png');
     background-size: 565px 425px;
 }
+
+.one {
+    margin-top: 16.5vh;
+    margin-bottom: 6vh;
+    margin-left: 1vw;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.two {
+    font-weight: bold;
+    font-size: 23px;
+    margin-left: 8.3vw;
+    margin-bottom: 7vh;
+}
+
+.three {
+    font-weight: bold;
+    font-size: 23px;
+    margin-left: 5vw;
+}
+
+.four {
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 3vh;
+    margin-left: 11.9vw;
+}
+
+.five {
+    font-weight: bold;
+    font-size: 23px;
+    margin-left: 11.9vw;
+    margin-top: 1.8vh;
+}
