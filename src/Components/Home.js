@@ -7,6 +7,7 @@ import { Button} from 'react-bootstrap';
 import Graph from "../img/MainPageGraph.jpg";
 import Live from "./Live"
 import HomeRanking from "./HomeRanking";
+import "../css/Team.css";
 
 
 function Home() {
@@ -38,22 +39,24 @@ function Home() {
     </div>
     <Live/>
     <div className="intro_Container">
-      <div className="intro_text">
-          <h1>KBO 리그 순위 예측</h1>
-          <h4>팀별 정규시즌 순위 예측과 <br/>선수별 OPS, ERA를 예측합니다</h4>
-          <NavLink to="/MainTeam">
-              <Button className="to_team">Team</Button>
-          </NavLink>
-          <NavLink to="/MainPlayer">
-              <Button className="to_player">Player</Button>
-          </NavLink>
-      </div>
-      <div className="intro_img">
-          <img className="MainPageGraph" src={Graph} alt="graph"/>
-      </div>
+        <div className="intro_text">
+            <h1>KBO 리그 순위 예측</h1>
+            <h4>팀별 정규시즌 순위 예측과 <br/>선수별 OPS, ERA를 예측합니다</h4>
+            <NavLink to="/MainTeam">
+                <Button className="to_team">Team</Button>
+            </NavLink>
+            <NavLink to="/MainPlayer">
+                <Button className="to_player">Player</Button>
+            </NavLink>
+        </div>
+        <div className="intro_img">
+            <img className="MainPageGraph" src={Graph} alt="graph"/>
+        </div>
     </div>
-    <HomeRanking id="0"/>
-    <HomeRanking id="1"/>
+    <div className="Home_Player_Ranking_Page">
+          <HomeRanking id="0"/>
+          <HomeRanking id="1"/>
+    </div>
     </div>
   );
 }
