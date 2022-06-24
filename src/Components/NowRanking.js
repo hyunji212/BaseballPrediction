@@ -38,7 +38,7 @@ function NowRanking() {
            {table_title.map((title)=>(
                <th className="Home_Table_Title">{title}</th>
            ))}
-            {ranking.map((rank,idx)=>(
+            {ranking.map((rank)=>(
                <tr className="Table_Content" style={{textAlign: "center"}}>
                    <td>{rank.ranking}</td>
                    <td>{rank.team}</td>
