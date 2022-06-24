@@ -11,7 +11,9 @@
 }
 
 .other_player {
-    margin-left: 0;
     height: 3vh;
     color: black;
+    border-bottom: 2px solid black;
+    position: relative;
+    top: 15px;
 }

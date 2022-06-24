@@ -99,8 +99,6 @@ body {
   /*<div className="icon6"><img src="" width={40} height={40} alt=""/></div>*/
 
   .teamselect{
-    height: 4.5vh;
-    width: 6vw;
     margin-bottom: 0.2vh;
     margin-right :0.2vw ;
     color: white;

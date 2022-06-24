@@ -10,7 +10,7 @@ import HomeRanking from "./HomeRanking";
 
 
 function Home() {
-  const Team_Arr = ["KIA","롯데","삼성","두산","LG","SSG","한화","키움","NC","kt" ];
+  const Team_Arr = ["KIA","롯데","삼성","두산","LG","SSG","한화","키움","NC","kt"];
 
   return (
     <div style={{overflowX: 'hidden'}}>
@@ -26,7 +26,7 @@ function Home() {
           <div className="teamcontainer">
               {Team_Arr.map((team,idx)=> (
                   <NavLink to={`/Team/${idx}`} key={idx} style={{ textDecoration: 'none'}}>
-                  <Button className="teamselect"> {team}</Button> 
+                  <button className="teamselect" style={{height:"4.5vh" , width: "6vw"}}> {team}</button> 
                   </NavLink>
             ))}</div>
           <div className="Home_Ranking">
