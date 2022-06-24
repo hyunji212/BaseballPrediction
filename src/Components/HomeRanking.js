@@ -8,7 +8,7 @@ function HomeRanking(props) {
  const [game, setGame] = useState(null);
  const [Loading, setLoading] = useState(false);
  const [error, setError] = useState(null);
-const RealTitle= ["선수별 랭킹 1", "선수별 랭킹 2"]
+const RealTitle= ["<선수 랭킹>", "<선수 랭킹>"]
 
   const id = Number(props.id);
   const title = [["항목","타율","출루율","장타율","타점","득점","홈런"],
