@@ -9,10 +9,13 @@
 
 .GGRankingTable{
     float:left;
+    width: 400px;
+    height: 70vh;
+    top: 10vh;
+    left: -10vw;
+    position: relative;
     background-color: aqua;
-    margin-top: 8vh;
-    margin-left: 0px;
-    margin-right: 0;
+    border-radius: 10px;
 }
 
 .glove_part {
