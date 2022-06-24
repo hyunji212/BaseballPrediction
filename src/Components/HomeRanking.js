@@ -70,6 +70,7 @@ const RealTitle= ["타자 랭킹", "투수 랭킹"]
           <th className="Home_Player_Ranking_Table_Title" style={{borderBottom:"2px solid gray",paddingBottom:"0.8vh"}}>{title}</th>
       ))}{content(id)}
         </div>
+        <br></br>
      </table>
     </div>
     </div>
