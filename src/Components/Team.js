@@ -1,7 +1,6 @@
 import {React} from "react";
 import { useLocation } from 'react-router-dom';
 import IndTeam from "./IndTeam";
-import SideBar from "./sidebar";
 import Nav from "./Nav";
 
 function Team() {
