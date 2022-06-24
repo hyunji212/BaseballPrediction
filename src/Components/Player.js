@@ -101,7 +101,7 @@ function content(id){
 
 
   return (
-    <div  style={{backgroundColor:"#EBEFF7", height:"1000vh"}}>
+    <div style={{backgroundColor:"#EBEFF7", backgroundSize:"cover", height:"100%"}}>
       <Nav/>
         <div className="Page_Player">
           <div className="player_info">
@@ -113,7 +113,7 @@ function content(id){
           </div>
           <div>
           {
-            <table  style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "80vw", paddingTop: "15px", borderCollapse:"collapse", position:"relative", left:"7.6vw", top:"2.3vh"}}>
+            <table  style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "80vw", paddingTop: "15px", borderCollapse:"collapse", position:"relative", left:"7.6vw", top:"2.3vh", marginBottom: "6vh"}}>
               <thead>
           {ranking_titles[id].map((title) => (
               <th className="Player_Table_Title">{title}</th>
@@ -122,6 +122,7 @@ function content(id){
                 </tbody>
             </table>
           }
+          <br/>
           </div>
           </div>
     </div>
