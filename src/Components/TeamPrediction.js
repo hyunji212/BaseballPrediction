@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/MainTeam.css";
 import NowRanking from "./NowRanking"
+import RankingPrediction from "./RankingPrediction";
 import SideBar from "./sidebar";
 
 function TeamPredicion() {
@@ -15,6 +16,7 @@ function TeamPredicion() {
       <div className="mainteam_ranking_title" style={{fontWeight: "bold", color:"white", fontSize: "20px", marginLeft: "35vw", marginTop: "3.5vh"}}>현재 순위</div>
       <div className="mainteam_ranking">
         <NowRanking/>
+        <RankingPrediction/>
       </div>
     </div>
   );
