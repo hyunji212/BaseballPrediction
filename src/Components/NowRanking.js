@@ -32,8 +32,8 @@ function NowRanking() {
 
   return (
     <div className="Home_Ranking" style={{width: "600px", height: "620px"}}>
-        { <table className="Home_Table" style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "600px",height: "78vh", paddingTop: "25px"}}>
-            <th>순위</th><th>팀</th><th>경기</th><th>승 - 패 - 무</th><th>승률</th><th>게임 차</th><th>연속</th>
+        { <table className="Home_Table" style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "600px",height: "70vh", paddingTop: "25px"}}>
+           <th>순위</th><th>팀</th><th>경기</th><th>승 - 패 - 무</th><th>승률</th><th>게임 차</th><th>연속</th>
             {ranking.map((rank,idx)=>(
                <tr className="Table_Content" style={{textAlign: "center"}}>
                    <td>{rank.ranking}</td>

@@ -32,7 +32,7 @@ function Player() {
             const response = await axios.get("/realtime-ranking");
             setGame(response.data.data);
         } catch(e){
-            console.log(e)
+        
             setError(e);
   
         }
@@ -54,28 +54,19 @@ if (!game) return null;
       <Nav/>
       <div className="player_info">
         <p className="other_player">
-          <p style={{fontSize:"18px"}}><NavLink to={`/Player/${move_id}`} className="linktootherside" style={{ textDecoration: 'none', fontSize: "18px", color:"black"}} > {Player_Arr[move_id]} </NavLink> 보러가기</p>
+          <p style={{fontSize:"18px"}}><NavLink to={`/Player/${move_id}`} className="linktootherside" style={{textDecoration:"None", fontSize: "18px", color:"black"}} > {Player_Arr[move_id]}</NavLink> 보러가기</p>
         </p>
         <p className="player_title">{title[id]}</p>
         <p style={{whiteSpace: "pre-wrap"}}>{desc[id]}</p>
       </div>
       <div style={{width: "600px", height: "620px"}}>
       {
-<<<<<<< HEAD
-        <table>
-      {ranking_titles[id].map((title) => (
-          <th>{title}</th>
-      ))}
-            {game.map((rank)=>(
-               <tr>
-=======
-        <table  style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "600px",height: "78vh", paddingTop: "25px"}}>
+        <p  style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "600px",height: "78vh", paddingTop: "25px"}}>
       {ranking_titles[id].map((title, index) => (
           <th>{title}</th>
       ))}
             {game.map((rank,idx)=>(
                <tr style={{textAlign: "center"}}>
->>>>>>> 711d54e37dde12f8ff5e0c564c6cba13896f8f7c
                    <td>{rank.ranking}</td>
                    <td>{rank.ranking}</td>
                    <td>{rank.ranking}</td>
@@ -93,7 +84,7 @@ if (!game) return null;
                     </tr> 
             ))}
 
-        </table>
+        </p>
       }
       </div>
     </div>
