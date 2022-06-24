@@ -78,9 +78,9 @@ function GGRanking(props) {
 
   return (
     <div>
-        <div className="GGRankingTable_title" style={{float:"left", fontWeight:"bold", fontSize:"30px", color:"white", marginLeft:"5vw"}}>{titles[id]}</div>
+        <div className="GGRankingTable_title" style={{float:"left", fontWeight:"bold", fontSize:"30px", color:"white", marginLeft:"-4vw", paddingLeft:"17vw"}}>{titles[id]}</div>
         <div>
-            <table className="GGRankingTable" style={{backgroundColor: "white", marginlLeft:"auto", marginRight:"auto", borderRadius: "10px 10px", width: "340px",height: "72vh", paddingTop: "5px"}}>
+            <table className="GGRankingTable" style={{backgroundColor: "aqua", borderRadius: "10px 10px", width: "300px",height: "72vh", paddingTop: "5px"}}>
                 {table_titles[id].map((title)=>(
                     <th style={{verticalAlign:"middle"}}>{title}</th>
                 ))}{content(id)}
